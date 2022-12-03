@@ -1,0 +1,23 @@
+@use "../custom" as *;
+
+.btn1{
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    padding: 13px 25px;
+    background:$secondary;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.section_btn{
+    width: fit-content;
+    height: fit-content;
+    font-size: 14px;
+    padding: 4px 8px;
+    background:white;
+    border: none;
+    border-radius: 3px;
+    color: $primary;
+}

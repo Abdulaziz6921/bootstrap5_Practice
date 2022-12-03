@@ -1,0 +1,28 @@
+@use "../custom" as *;
+
+.testimonials {
+    &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: white;
+            z-index: -1;
+    
+        }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background: $primary;
+        z-index: -1;
+
+    } 
+}

@@ -1,0 +1,86 @@
+@use "../custom" as *;
+
+.trending{
+    height: fit-content;
+
+    .lorem{
+        padding: 29px 320px;
+        text-align: center;
+
+        @media screen and (max-width:1400px) {
+            padding: 29px 83px;
+        }
+
+        @media screen and (max-width:800px) {
+            padding: 20px 10px;
+        }
+    }
+
+    .box{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 128px;
+
+        @media screen and (max-width:800px) {
+            margin-bottom: 20px;
+            
+        }
+
+
+        .card {
+                width: 405px;
+                height: 500px;
+                overflow: hidden;
+                border: none;
+                background: $primary;
+                position: relative;
+                z-index: 2;
+                color: white;
+                border-radius: 16px;
+                border-bottom-right-radius: 0;
+
+                @media screen and (max-width:1400px) {
+                    width: 330px;
+                }
+
+                @media screen and (max-width:1200px) {
+                    width: 300px;
+                }
+
+                @media screen and (max-width:1024px) {
+                    width: 230px;
+                }
+
+                @media screen and (max-width:800px) {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                // @media screen and (max-width:1024px) {
+                //     width: 250px;
+                // }
+        
+                .card-title {
+                    font-size: 24px;
+                    margin: 20px 0;
+                    padding-right: 35px;
+                }
+        
+                .card_img {
+                    height: 315px;
+                    width: 315px;
+                    object-fit: contain;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    right: -48px;
+                }
+        
+        
+            }
+
+    }
+
+    
+}
+

@@ -1,0 +1,26 @@
+
+$first:  rgba(0, 53, 59, 1);
+$second:rgba(34, 164, 90, 1);
+$third:rgba(252, 216, 202, 1);
+$fourth:#AADEA8;
+
+$primary:$first;
+$secondary:$second;
+$warning:$third;
+
+$success:$fourth;
+
+
+
+// $container-padding-x: 0;
+
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
+
+
+

@@ -1,0 +1,41 @@
+@use "../custom" as *;
+
+footer{
+    height: fit-content;
+
+    input{
+        width:64%;
+        margin-right: 16px;
+        height: 48px;
+        text-indent: 10px;
+        font-size: 17px;
+    }
+
+    li{
+        list-style: none;
+        padding-bottom: 16px;
+
+        
+
+        a{
+            color:white;
+            text-decoration: none;
+            font-size: 14px;
+            &:hover {
+                    color: $secondary;
+                }
+            
+        }
+    }
+
+    .soc_media_link{
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background: $secondary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

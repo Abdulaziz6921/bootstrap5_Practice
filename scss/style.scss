@@ -1,0 +1,24 @@
+@use './custom';
+
+
+// IMPORT THE COMPONENTS 
+
+@use './components/buttons';
+@use './components/mixins';
+@use './components/typography';
+
+
+// // IMPORT THE SECTIONS 
+@use 'sections/navbar';
+@use './sections/introduction';
+@use './sections/about';
+@use './sections/benefits';
+@use './sections/blog';
+@use './sections/footer';
+@use './sections/join';
+@use './sections/testimonials';
+@use './sections/trending';
+
+
+
+
