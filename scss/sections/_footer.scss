@@ -9,6 +9,11 @@ footer{
         height: 48px;
         text-indent: 10px;
         font-size: 17px;
+
+        @media screen and (max-width:500px) {
+            margin-right: 5px;
+            width: 55%;
+        }
     }
 
     li{
