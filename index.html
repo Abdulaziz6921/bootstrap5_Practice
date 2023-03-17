@@ -2,667 +2,378 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap5 Practice</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+
 </head>
 
-<body>
-
-    <!-- Navbar __________________ -->
-
-    <nav class=" navbar navbar-expand-lg bg-primary menu">
-        <div class="container">
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav  mb-2 mb-lg-0 ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
-                    </li>
-
-
-                </ul>
-
-
-
-            </div>
-            <div class="d-flex justify-content-end align-items-center right_side ">
-
-                <div class="search_input">
-                    <span class="pe-1"><i class="bi bi-search"></i></span> <input type="search" placeholder="Search"
-                        class="bg-primary text-white" />
-                </div>
-
-                <div class="cart"> <span class="pe-1"><i class="bi bi-cart-fill"></i></span> Cart</div>
-
-                <button type="button">Sign up</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Introduction ____________ -->
-
-    <div class="intro container-fluid d-flex  align-items-center">
-        <div class="container row mx-auto h-75 d-flex justify-content-between align-items-center">
-            <div class="col-md-6 h-75 d-flex flex-column justify-content-between">
-                <h1 class="head1">Become an No-Code expert and find a job</h1>
-
-                <p class="lorem text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel
-                    molestie magna
-                    curabitur
-                    tincidunt nunc sit
-                    amet.</p>
-
-                <div>
-                    <button type="button" class="btn1">Explore Courses</button>
-
-                    <button type="button" class="btn1 bg-transparent">Watch Video</button>
-                </div>
-
-                <img src="./images/Frame.png" alt="" class="mt-3 mt-md-0">
-
-
-
-            </div>
-
-            <div class="col-md-6  h-100 d-flex justify-content-end position-relative">
-                <img src="./images/IMAGE.png" alt="" class="h-100 img1 mt-5 mt-md-0">
-
-                <div class="img2 d-none d-xxl-block">
-                    <img src="./images/IMAGEs.png" alt="">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Companies ______________ -->
-
-    <div class="container-fluid companies text-center">
-        <p class="lorem text-white">Trusted by the world's best companies</p>
-    </div>
-
-    <!-- About _________________ -->
-
-    <div class="about bg-white">
-        <div class="container  bg-warning  h-100 rounded-4 d-flex justify-content-center align-items-center ">
-
-            <div class="inner d-flex justify-content-between align-items-center flex-column">
-
-                <button class="section_btn mb-3">About us</button>
-
-                <h2 class="head2 text-center">No-code Education Platform</h2>
-                <p class="lorem text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    varius
-                    enim in
-                    eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-
-                <button class="btn1 bg-primary">About us</button>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Premium courses _______ -->
-
-    <div class="intro container-fluid  bg-white d-flex  align-items-center">
-        <div class="container row h-75 d-flex justify-content-between align-items-center px-0 mx-auto">
-
-
-            <div class="container-fluid h-100 d-flex justify-content-start px-md-0 col-md-6">
-                <img src="./images/IMAGE3.png" alt="" class="h-100 img1">
-
-            </div>
-
-            <div class="container-fluid  text_side d-flex flex-column justify-content-between col-md-6">
-                <h2 class="head2">Premium courses from the industry leaders</h2>
-
-                <p class="lorem py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in
-                    eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-                </p>
-
-                <div>
-                    <button type="button" class="btn1 bg-primary">Get started</button>
-
-                    <button type="button" class="btn1 bg-transparent text-primary">Learn more <span><i
-                                class="bi bi-chevron-right"></i></span></button>
-                </div>
-
-
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Easily perfect course  -->
-
-    <div class="intro bg-white container-fluid d-flex align-items-start ">
-        <div class="container row h-75  mx-auto d-flex justify-content-between align-items-center flex-md-row-reverse">
-
-
-            <div class="container-fluid col-md-6 h-100 d-flex justify-content-end">
-                <img src="./images/adfjkalk5.png" alt="" class="h-100 img1">
-            </div>
-
-            <div class="container-fluid col-md-6 text_side d-flex  flex-column justify-content-between">
-                <h2 class="head2">Easily find the perfect course for you</h2>
-
-                <p class="lorem py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in
-                    eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-
-                <div>
-                    <button type="button" class="btn1 bg-primary">Get started</button>
-
-                    <button type="button" class="btn1 bg-transparent text-primary">Learn more <span><i
-                                class="bi bi-chevron-right"></i></span></button>
-                </div>
-
-
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Trending ____________ -->
-
-    <div class="trending container-fluid">
-        <div class="container d-flex justify-content-between align-items-center 
-         flex-column">
-            <button class="section_btn bg-warning">Trending</button>
-
-            <h2 class="head2 text-center mt-3 ">The most popular courses</h2>
-
-            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-                eros
-                elementum tristique. Duis
-                cursus, mi quis viverra ornare.</p>
-
-
-
-
-
-
-
-
-        </div>
-
-        <div class="box container mx-auto px-0 d-flex row justify-content-between">
-            <div class="card">
-                <div class="card-body">
-                    <button class="section_btn mt-4">Beginner</button>
-                    <div class="card-title">
-                        Webflow Basics
-                    </div>
-
-                    <p class="card-text">$ 24.00 USD</p>
-                </div>
-
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1"> Enroll course</button>
-                </div>
-
-                <img src="./images/af.png" alt="" class="card_img">
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <button class="section_btn mt-4">Beginner</button>
-                    <div class="card-title">
-                        Webflow Interactions Masterclass
-                    </div>
-
-                    <p class="card-text">$ 55.00 USD</p>
-                </div>
-
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1"> Enroll course</button>
-                </div>
-
-                <img src="./images/IMAGE (1).png" alt="" class="card_img">
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <button class="section_btn mt-4">Beginner</button>
-                    <div class="card-title">
-                        Advanced CMS and Integrations
-                    </div>
-
-                    <p class="card-text">$ 38.00 USD</p>
-                </div>
-
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1"> Enroll course</button>
-                </div>
-
-                <img src="./images/IMAGE (2).png" alt="" class="card_img">
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Join _______________  -->
-
-    <div class="join intro container-fluid d-flex align-items-center bg-white">
-        <div class="container row h-100  bg-warning mx-auto d-flex justify-content-between align-items-center px-0">
-            <div
-                class="container-fluid col-md-6 text_side d-flex flex-column justify-content-between px-5 py-5 py-xl-0">
-
-                <button class="section_btn mb-3">Join us</button>
-                <h2 class="head2">Join more than 17,000+ students all over the world</h2>
-
-                <p class="lorem py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                    in
-                    eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare.</p>
-
-
-                <button type="button" class="btn1 bg-primary">Get started</button>
-
-
-            </div>
-
-            <div class="container-fluid col-md-6 h-100 d-flex justify-content-end px-0 pt-5 pt-md-0 img_side">
-                <img src="./images/jhghjg.png" alt="" class="h-100 w-100">
-            </div>
-        </div>
-    </div>
-
-    <div class="boxes container-fluid">
-        <div class="container row mx-auto px-0 d-flex justify-content-between">
-
-            <div class="box col-xl-3">
-                <div class="box_img">
-                    <img src="./images/Frame1.png" alt="">
-                </div>
-                <h4>Browse our courses</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                    enim
-                    in eros elementum tristique duis cursus
-                    mi quis viverra.</p>
-            </div>
-
-            <div class="box col-xl-3">
-                <div class="box_img">
-                    <img src="./images/Frame (1).png" alt="">
-                </div>
-                <h4>Purchase quickly and securely</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                    enim
-                    in eros elementum tristique duis cursus
-                    mi quis viverra.</p>
-            </div>
-
-            <div class="box col-xl-3">
-                <div class="box_img">
-                    <img src="./images/Frame (2).png" alt="">
-                </div>
-                <h4>Start learning right away</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                    enim
-                    in eros elementum tristique duis cursus
-                    mi quis viverra.</p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Benefits _____________ -->
-
-    <div class="benefits container  px-0">
-        <div class="container d-flex justify-content-between align-items-center flex-column text-center">
-            <button class="section_btn bg-warning mb-3">Benefits</button>
-
-            <h2 class="head2 pt-2 pb-4">Grow your knowledge from best teachers in the industry</h2>
-
-            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-                elementum tristique. Duis
-                cursus, mi quis viverra ornare.</p>
-        </div>
-
-
-        <div class="container px-0 mt-lg-5">
-            <div class="row d-flex justify-content-between w-100 mx-auto inner-one">
-                <div class="col-lg-3 px-0 wrapper">
-                    <div class="wrap ">
-                        <img src="./images/Frame (4).png" alt="">
-
-                        <h3>Over 430+ hours of lessons</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-
-
-                    </div>
-                    <div class="wrap  mt-5">
-                        <img src="./images/Frame1.png" alt="">
-
-
-                        <h3>40+ teachers</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-
-
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gray-900 sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+
+                <div class="sidebar-brand-text mx-3">The Sweet Shop</div>
+            </a>
+
+
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="./index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+
+            <!-- Nav Item - Transactions -->
+            <li class="nav-item active">
+                <a class="nav-link" href="./transactions.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Transactions</span></a>
+            </li>
+
+            <!-- Nav Item - Links -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                    <span>Links & Resources</span></a>
+            </li>
+
+            <!-- Nav Item - Sales -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-money-bill"></i>
+                    <span>Sales</span></a>
+            </li>
+
+            <!-- Nav Item - Settings -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <span>Settings</span></a>
+            </li>
+
+            <!-- Nav Item - Payout -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                    <span>Payout details</span></a>
+            </li>
+
+            <!-- Nav Item - FAQ -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <span>Affiliate FAQ</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Components</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
+            </li> -->
 
-                <div class="col-lg-5  px-0 middle_img">
-                    <img src="./images/benefits.png" alt="" class="w-100 h-100">
-                </div>
-
-                <div class="col-lg-3  px-0 wrapper">
-                    <div class="wrap  ">
-                        <img src="./images/Frame (5).png" alt="">
-
-                        <h3>Online community</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-
-
-                    </div>
-                    <div class="wrap  mt-5">
-                        <img src="./images/Frame (6).png" alt="">
-
-
-                        <h3>1-on-1 coaching</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-
-
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
+            </li> -->
 
-            </div>
+            <!-- Divider -->
+            <!-- <hr class="sidebar-divider"> -->
 
-            <div class="my-lg-5 row mx-auto ">
-                <button class="mx-auto my-5 btn1 bg-primary ">Get started</button>
-            </div>
+            <!-- Heading -->
+            <!-- <div class="sidebar-heading">
+                Addons
+            </div> -->
 
-
-
-
-        </div>
-
-
-
-    </div>
-
-    <!-- Testimonials _________________ -->
-
-    <div class="about testimonials  bg-white">
-        <div class="container bg-warning h-100 rounded-4 d-flex justify-content-center align-items-center flex-column">
-
-            <div class="inner d-flex justify-content-between align-items-center flex-column">
-
-                <button class="section_btn mb-3">Testimonials</button>
-
-
-                <h2 class="head2 text-center">What our students say</h2>
-                <p class="lorem text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                    enim in eros elementum tristique.</p>
-
-
-
-
-
-            </div>
-
-            <div class="container-fluid row mb-5">
-                <img src="./images/Frame@2x.png" alt="" class="col-md-4 mb-5 ">
-                <img src="./images/Frame@2x.png" alt="" class="col-md-4 mb-5">
-                <img src="./images/Frame@2x.png" alt="" class="col-md-4 mb-5">
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- Blog _________________________ -->
-    <div class="blog trending container-fluid  bg-primary pt-5">
-
-        <div class="container">
-            <button class="section_btn bg-warning">Blog</button>
-
-            <div class="d-flex justify-content-between w-100 mt-3">
-                <h2 class="head2 text-white">Our latest news</h2>
-                <button class="btn1 bg-white text-primary">View all</button>
-            </div>
-
-
-
-        </div>
-
-        <div class="box mb-0  container mx-auto px-0 d-flex row justify-content-between bg-primary">
-            <div class="card bg-white text-primary px-0 rounded-0">
-                <img src="./images/img1.png" alt="" class="card-img-top">
-                <div class="card-body">
-                    <button class="section_btn mt-4 bg-success">Freelance</button>
-                    <div class="card-title">
-                        7 freelance mistakes to avoid
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
-
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                        enim in eros.</p>
                 </div>
+            </li> -->
 
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1 text-primary bg-transparent"> Read more <span><i
-                                class="bi-chevron-right text-primary"></i></span></button>
-                </div>
+            <!-- Nav Item - Charts -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li> -->
 
+            <!-- Nav Item - Tables -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li> -->
 
-            </div>
+            <!-- Divider -->
+            <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
-            <div class="card bg-white text-primary px-0 rounded-0">
-                <img src="./images/img2.png" alt="" class="card-img-top">
-                <div class="card-body">
-                    <button class="section_btn mt-4 bg-success">UI/UX Design</button>
-                    <div class="card-title">
-                        Brand design process explained
-                    </div>
-
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                        enim in eros.</p>
-                </div>
-
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1 text-primary bg-transparent"> Read more <span><i
-                                class="bi-chevron-right text-primary"></i></span></button>
-                </div>
-
-
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
 
-            <div class="card bg-white text-primary px-0 rounded-0">
-                <img src="./images/img3.png" alt="" class="card-img-top">
-                <div class="card-body">
-                    <button class="section_btn mt-4 bg-success">Business</button>
-                    <div class="card-title pe-0">
-                        The beginner’s guide to recruiting a Webflow developer
-                    </div>
 
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                        enim in eros.</p>
-                </div>
+        </ul>
+        <!-- End of Sidebar -->
 
-                <div class="card_footer ms-3 mb-4">
-                    <button class="btn1 text-primary bg-transparent"> Read more <span><i
-                                class="bi-chevron-right text-primary"></i></span></button>
-                </div>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
+            <!-- Main Content -->
+            <div id="content">
 
-            </div>
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar static-top">
 
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-dark">
+                        <i class="fa fa-bars"></i>
+                    </button>
 
-        </div>
-
-        <div class="container d-flex flex-column justify-content-between align-items-center pb-5">
-            <h2 class="head2 text-white">Start learning today</h2>
-            <p class="lorem text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-                in eros
-                elementum
-                tristique.</p>
-
-            <div class="pb-5">
-                <button class="btn1 me-sm-3">Get started</button>
-                <button class="btn1 bg-white text-primary">Contact us</button>
-            </div>
-        </div>
-
-    </div>
+                    <p class="mt-3 text-dark font-weight-bolder">Affiliate Dashboard</p>
 
 
 
-    <!-- Footer _______________________ -->
 
-    <footer class="container-fluid bg-primary pb-5">
 
-        <!-- Footer-top  -->
-        <div class="container row mx-auto px-0 d-flex align-items-center text-white">
-            <div class="col-lg-4 ps-lg-0 py-5">
-                <p class="pe-5">Join our newsletter to stay up to date on features and releases.</p>
+                </nav>
+                <!-- End of Topbar -->
 
-                <div class="w-100 d-lg-flex justify-content-between">
-                    <input type="text">
-                    <button class="btn1">Subscribe</button>
-                </div>
+                <!-- Begin Page Content -->
+                <div class="container-fluid px-0 bg-white ">
 
-                <p style="font-size:12px; margin-top: 19px;">and provide consent to receive updates from our company.
-                </p>
-            </div>
-            <div class="col-lg-8  px-0 py-5">
-                <div class="container-fluid row mx-auto">
-                    <div class="col-md-6 d-flex justify-content-between">
-                        <div class="col-6 ">
 
-                            <ul>
-                                <p>Pages</p>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Teachers</a></li>
-                            </ul>
+
+                    <div class="col-lg-11 px-5 bg-gray-100">
+                        <!-- Content Row -->
+                        <div class="row pt-3">
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-4 col-md-6 mb-4">
+                                <div class="card  h-100 ">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-dark text-uppercase ">
+                                                    Commission rate</div>
+                                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-2">25%</div>
+                                                <div class="text-xs mb-0 font-weight-bold text-gray-800 mt-2 mb-0">
+                                                    <p>Affiliate code:
+                                                        <br>
+                                                        <span>Link Attribution Window:365 days </span>
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-4 col-md-6 mb-4">
+                                <div class="card h-100 ">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-dark text-uppercase ">
+                                                    Lifetime earnings</div>
+                                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-2">N/A</div>
+                                                <div class="text-xs mb-0 font-weight-bold text-gray-800 mt-2 mb-0">
+                                                    <p>Last 7 days: N/A
+                                                        <br>
+                                                        <span>Last 30 days: N/A</span>
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-4 col-md-6 mb-4">
+                                <div class="card h-100 ">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-dark text-uppercase ">
+                                                    Lifetime earnings</div>
+                                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-2">N/A</div>
+                                                <div class="text-xs mb-0 font-weight-bold text-gray-800 mt-2 mb-0">
+                                                    <p>Last 7 days: N/A
+                                                        <br>
+                                                        <span>Last 30 days: N/A</span>
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
-                        <div class="col-6">
 
-                            <ul>
-                                <p>CMS Pages</p>
-                                <li><a href="#">Blog Post</a></li>
-                                <li><a href="#">Blog Categories</a></li>
-                                <li><a href="#">Courses Single</a></li>
-                                <li><a href="#">Courses Categories</a></li>
-                                <li><a href="#">Product Page</a></li>
-                                <li><a href="#">Product Categories</a></li>
-                                <li><a href="#">Teachers Single</a></li>
-                                <li><a href="#">Episode Single</a></li>
-                            </ul>
+
+                        <!-- Content Row -->
+
+                        <div class="row">
+
+                            <!-- Area Chart -->
+                            <div class="col-xl-12 col-lg-7 bg-white p-5 border-gray border rounded">
+                                <div>Products </div>
+                                <p>The school owner has enabled affiliate commissions for the following products</p>
+                                <div class="col-12 text-dark">
+                                    <div class="row mt-4">
+                                        <div class="col-4">
+                                            <p class=" text-xs font-weight-bolder">PRODUCT</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="text-xs font-weight-bolder">AFFILIATE LINK</p>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-4 text-success font-weight-bolder ">
+                                            <p>Cupcake like a Boss</p>
+                                        </div>
+                                        <div class="col-6 font-weight-bolder ">
+                                            <p>https://abdulazizs-portfolio.netlify.app/</p>
+                                        </div>
+
+                                        <div class="col-2 text-xs d-none d-md-block">
+                                            <button class="rounded border-dark  border">Copy</button>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
                         </div>
                     </div>
 
-                    <div class="col-md-6 d-flex justify-content-between">
-                        <div class="col-6">
 
-                            <ul>
-                                <p>Account Pages</p>
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Sign Up</a></li>
-                                <li><a href="#">Forgot Password</a></li>
-                                <li><a href="#">Reset Password</a></li>
-                                <li><a href="#">Email Confirmation</a></li>
 
-                            </ul>
 
-                        </div>
-                        <div class="col-6">
 
-                            <ul>
-                                <p>Utility Pages</p>
-                                <li><a href="#">Style Guide</a></li>
-                                <li><a href="#">Changelog</a></li>
-                                <li><a href="#">Licenses</a></li>
-                                <li><a href="#">404</a></li>
-                                <li><a href="#">Password</a></li>
+                </div>
 
-                            </ul>
-                        </div>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <!-- <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
-            </div>
+            </footer> -->
+        <!-- End of Footer -->
 
-        </div>
+    </div>
+    <!-- End of Content Wrapper -->
 
-        <!-- Footer-bottom  -->
-        <div
-            class="container border-white border-top row mx-auto pt-5 d-flex justify-content-between flex-column-reverse flex-md-row">
-            <div class="col-md-8 col-xl-5 col-xxl-4 mt-5 mt-md-0 text-white text-center d-md-flex align-items-start">
-                <p>© Learnico by
-                    Minimal Square
-                    . Powered by
-                    Webflow
-                    .</p>
-            </div>
-            <div
-                class="col-4 col-md-2 col-xxl-1 d-flex justify-content-between align-items-center px-0 mx-auto mx-md-0">
+    </div>
+    <!-- End of Page Wrapper -->
 
-                <div class="soc_media_link"><a href="#"><i class="bi bi-facebook"></i></a></div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                <div class="soc_media_link"><a href="#"><i class="bi bi-twitter"></i></a></div>
-
-                <div class="soc_media_link"><a href="#"><i class="bi bi-instagram"></i></a></div>
-
-
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
 
 </body>
-
-
 
 </html>
