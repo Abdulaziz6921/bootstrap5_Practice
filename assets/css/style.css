@@ -10771,6 +10771,21 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.highlight {
+  background-color: yellow;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: red;
+}
+
+.img-hover-zoom {
+  transition: transform 0.4s ease;
+}
+
+.img-hover-zoom:hover {
+  transform: scale(1.1);
+}
+
 .btn1 {
   width: fit-content;
   height: fit-content;
@@ -10828,35 +10843,75 @@ textarea.form-control-lg {
 .menu .navbar-collapse {
   margin-right: 160px;
 }
-.menu .right_side {
-  width: fit-content;
-  height: 100%;
+.menu .search_input input {
+  outline: none !important;
+  border: none !important;
+  text-indent: 1px !important;
 }
-.menu .right_side .search_input {
-  width: 110px;
-  height: fit-content;
-  display: flex;
-}
-.menu .right_side .search_input input {
-  width: 90%;
-  height: 70%;
-  outline: none;
-  border: none;
-}
-.menu .right_side .cart {
+.menu .cart {
   width: 80px;
   height: fit-content;
 }
-.menu .right_side button {
+@media screen and (max-width: 343.98px) {
+  .menu .cart {
+    display: none !important;
+  }
+}
+.menu .nav-buttons button {
   width: 106px;
-  height: 50px;
+  height: 45px;
   border-radius: 8px;
   border: none;
 }
-@media screen and (max-width: 450px) {
-  .menu .right_side button {
+@media screen and (max-width: 991.98px) {
+  .menu .nav-buttons button {
     width: 80px;
-    height: 45px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .menu .nav-buttons button {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 343.98px) {
+  .menu .nav-buttons button {
+    width: 50px;
+  }
+}
+.menu #megaDropdown::after {
+  display: none !important;
+}
+.menu .dropdown-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative;
+}
+.menu .dropdown-menu a {
+  color: black !important;
+}
+.menu .dropdown-menu .dropdown-right-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 43%;
+  background-color: rgba(128, 128, 128, 0.05);
+  z-index: 0;
+  pointer-events: none;
+}
+.menu .bi-chevron-down {
+  transition: transform 0.3s ease;
+}
+.menu a.show .bi-chevron-down {
+  transform: rotate(180deg);
+}
+.menu .hover-bg:hover {
+  background-color: rgba(128, 128, 128, 0.128);
+  transition: 0.2s ease;
+}
+@media (max-width: 991.98px) {
+  .menu .navbar-collapse {
+    margin-right: 0px !important;
   }
 }
 
@@ -22185,19 +22240,24 @@ footer .soc_media_link {
 .join {
   height: fit-content;
 }
-.join .container {
+.join > .container {
   border-radius: 24px 0 0 24px;
 }
+@media screen and (max-width: 770px) {
+  .join > .container {
+    border-radius: 16px 16px 0 0;
+  }
+}
 .join .img_side {
-  height: 539px;
+  height: 100%;
 }
 
 .boxes {
-  margin: 80px 0 192px 0;
+  margin: 80px 0 80px 0;
 }
 @media screen and (max-width: 1024px) {
   .boxes {
-    margin: 30px 0 72px 0;
+    margin: 30px 0 60px 0;
   }
 }
 .boxes .container {

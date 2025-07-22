@@ -1,0 +1,14 @@
+.highlight {
+    background-color: yellow;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: red;
+}
+
+.img-hover-zoom {
+    transition: transform 0.4s ease;
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.1);
+}
