@@ -19,10 +19,9 @@ function filterCards(cards, keyword) {
     const trimmedKeyword = keyword.trim().toLowerCase();
     const isMatch = lowerTitle.includes(trimmedKeyword);
 
-    card.style.display = isMatch ? "flex" : "none";
+    card.classList.toggle("d-none", !isMatch); // ✅ Use Bootstrap class toggle
 
     if (isMatch && trimmedKeyword !== "") {
-      // Highlight match
       const regex = new RegExp(`(${trimmedKeyword})`, "gi");
       const highlighted = rawText.replace(
         regex,
@@ -31,8 +30,7 @@ function filterCards(cards, keyword) {
       titleEl.innerHTML = highlighted;
       found = true;
     } else {
-      // Reset to original text if not matching
-      titleEl.textContent = rawText;
+      titleEl.innerHTML = rawText;
     }
   });
 
@@ -51,40 +49,40 @@ function handleSearch(keyword) {
   const trimmed = keyword.trim().toLowerCase();
 
   if (trimmed === "") {
-    // ✅ Reset view: show all sections and cards
     mainSections.forEach((sec) => showSection(sec));
     courseCards.forEach((card) => {
-      card.style.display = "flex";
+      card.classList.remove("d-none"); // ✅ instead of style.display
       const titleEl = card.querySelector(".card-title");
       if (titleEl) {
-        titleEl.innerHTML = titleEl.textContent; // remove highlight
+        titleEl.innerHTML = titleEl.textContent;
       }
     });
     blogCards.forEach((card) => {
-      card.style.display = "flex";
+      card.classList.remove("d-none");
       const titleEl = card.querySelector(".card-title");
       if (titleEl) {
-        titleEl.innerHTML = titleEl.textContent; // remove highlight
+        titleEl.innerHTML = titleEl.textContent;
       }
     });
     noResultsMsg.style.display = "none";
+
+    // ✅ Refresh ScrollTrigger in case visibility changes
+    ScrollTrigger.refresh();
     return;
   }
 
-  // ✅ Filter cards
   const hasCourseMatch = filterCards(courseCards, trimmed);
   const hasBlogMatch = filterCards(blogCards, trimmed);
 
-  // ✅ Hide all sections using helper
   mainSections.forEach((sec) => hideSection(sec));
-
-  // ✅ Show only matched sections using helper
   if (hasCourseMatch) showSection(courseSection);
   if (hasBlogMatch) showSection(blogSection);
 
-  // ✅ Handle "no results"
   noResultsMsg.style.display =
     !hasCourseMatch && !hasBlogMatch ? "block" : "none";
+
+  // ✅ Refresh ScrollTrigger to fix animation sync
+  ScrollTrigger.refresh();
 }
 
 searchInput.addEventListener("input", (e) => {

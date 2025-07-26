@@ -10790,4 +10790,12 @@ textarea.form-control-lg {
   transform: scale(1.1);
 }
 
+.bounce-hover {
+  transition: transform 0.4s ease !important;
+}
+
+.bounce-hover:hover {
+  transform: translateY(-15px) !important;
+}
+
 /*# sourceMappingURL=utilities.css.map */
