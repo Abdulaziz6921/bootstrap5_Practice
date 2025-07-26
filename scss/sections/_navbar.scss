@@ -61,6 +61,7 @@
       a{
          color: black !important;
       }
+      
       .dropdown-right-overlay {
          position: absolute;
          top: 0;
@@ -70,9 +71,20 @@
          background-color: rgba(128, 128, 128, 0.05); // light gray with opacity
          z-index: 0; // sits behind the dropdown content
          pointer-events: none; // prevent overlay from blocking clicks
-      }
 
-       
+         @media (max-width: 991.98px){
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;           
+         }
+      }
+      
+     @media (max-width: 991.98px){
+      .overlay-wrapper{
+         position: relative !important;
+      }
+   }  
   }
    // Rotate chevron when dropdown is open
   .bi-chevron-down {
@@ -91,6 +103,13 @@
   @media (max-width: 991.98px) {
      .navbar-collapse {
         margin-right: 0px !important;
+     }
+  }
+  @media (min-width: 425px) {
+     .blog_part{
+      width: 189px !important;
+      height: 124px !important;
+      flex-shrink: 0 !important;
      }
   }
 }

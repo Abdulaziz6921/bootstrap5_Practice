@@ -1,3 +1,7 @@
+@use '../custom' as *;
+*{
+    transition: 0.2s ease all;
+}
 .highlight {
     background-color: yellow;
     padding: 2px 4px;
@@ -12,3 +16,4 @@
 .img-hover-zoom:hover {
     transform: scale(1.1);
 }
+

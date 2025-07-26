@@ -1,11 +1,13 @@
 
 $first:  rgba(0, 53, 59, 1);
 $second:rgba(34, 164, 90, 1);
+$dark-second: #158e5e;
 $third:rgba(252, 216, 202, 1);
 $fourth:#AADEA8;
 
 $primary:$first;
 $secondary:$second;
+$secondary-600:$dark-second;
 $warning:$third;
 
 $success:$fourth;

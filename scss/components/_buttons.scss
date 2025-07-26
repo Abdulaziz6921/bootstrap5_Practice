@@ -9,6 +9,19 @@
     border: none;
     border-radius: 8px;
     color: white;
+
+    &:hover{
+        transform: translate(0, 4px);
+    }
+
+    &:not(.bg-transparent):hover {
+        background-color: $secondary-600 !important;
+        
+    }
+
+    &.bg-primary:hover {
+         background-color: #374151 !important;
+    } 
 }
 
 .section_btn{

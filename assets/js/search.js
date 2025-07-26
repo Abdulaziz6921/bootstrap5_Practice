@@ -53,8 +53,20 @@ function handleSearch(keyword) {
   if (trimmed === "") {
     // ✅ Reset view: show all sections and cards
     mainSections.forEach((sec) => showSection(sec));
-    courseCards.forEach((card) => (card.style.display = "flex"));
-    blogCards.forEach((card) => (card.style.display = "flex"));
+    courseCards.forEach((card) => {
+      card.style.display = "flex";
+      const titleEl = card.querySelector(".card-title");
+      if (titleEl) {
+        titleEl.innerHTML = titleEl.textContent; // remove highlight
+      }
+    });
+    blogCards.forEach((card) => {
+      card.style.display = "flex";
+      const titleEl = card.querySelector(".card-title");
+      if (titleEl) {
+        titleEl.innerHTML = titleEl.textContent; // remove highlight
+      }
+    });
     noResultsMsg.style.display = "none";
     return;
   }
@@ -75,9 +87,6 @@ function handleSearch(keyword) {
     !hasCourseMatch && !hasBlogMatch ? "block" : "none";
 }
 
-if (searchInput) {
-  searchInput.addEventListener("input", (e) => {
-    handleSearch(e.target.value);
-  });
-}
-console.log("Sections hidden:", mainSections.length);
+searchInput.addEventListener("input", (e) => {
+  handleSearch(e.target.value);
+});

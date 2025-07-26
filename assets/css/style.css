@@ -10771,6 +10771,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  transition: 0.2s ease all;
+}
+
 .highlight {
   background-color: yellow;
   padding: 2px 4px;
@@ -10795,6 +10799,15 @@ textarea.form-control-lg {
   border: none;
   border-radius: 8px;
   color: white;
+}
+.btn1:hover {
+  transform: translate(0, 4px);
+}
+.btn1:not(.bg-transparent):hover {
+  background-color: #158e5e !important;
+}
+.btn1.bg-primary:hover {
+  background-color: #374151 !important;
 }
 
 .section_btn {
@@ -10899,6 +10912,19 @@ textarea.form-control-lg {
   z-index: 0;
   pointer-events: none;
 }
+@media (max-width: 991.98px) {
+  .menu .dropdown-menu .dropdown-right-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu .dropdown-menu .overlay-wrapper {
+    position: relative !important;
+  }
+}
 .menu .bi-chevron-down {
   transition: transform 0.3s ease;
 }
@@ -10912,6 +10938,13 @@ textarea.form-control-lg {
 @media (max-width: 991.98px) {
   .menu .navbar-collapse {
     margin-right: 0px !important;
+  }
+}
+@media (min-width: 425px) {
+  .menu .blog_part {
+    width: 189px !important;
+    height: 124px !important;
+    flex-shrink: 0 !important;
   }
 }
 
@@ -22002,6 +22035,15 @@ textarea.form-control-lg {
   border-radius: 8px;
   color: white;
 }
+.btn1:hover {
+  transform: translate(0, 4px);
+}
+.btn1:not(.bg-transparent):hover {
+  background-color: #158e5e !important;
+}
+.btn1.bg-primary:hover {
+  background-color: #374151 !important;
+}
 
 .section_btn {
   width: fit-content;
@@ -22053,10 +22095,10 @@ textarea.form-control-lg {
 }
 .intro .img2 {
   position: absolute;
-  bottom: 55px;
-  left: 0;
-  width: 173px;
-  height: 180px;
+  bottom: 75px;
+  left: -70px;
+  width: 209;
+  height: 250px;
 }
 .intro .img2 img {
   width: 100%;
