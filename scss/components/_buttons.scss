@@ -12,15 +12,16 @@
 
     &:hover{
         transform: translate(0, 4px);
+        
     }
 
     &:not(.bg-transparent):hover {
-        background-color: $secondary-600 !important;
+        filter: brightness(0.9);
         
     }
 
     &.bg-primary:hover {
-         background-color: #374151 !important;
+        filter: brightness(1.3);
     } 
 }
 
