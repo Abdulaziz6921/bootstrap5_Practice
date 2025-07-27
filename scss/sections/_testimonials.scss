@@ -25,4 +25,30 @@
         z-index: -1;
 
     } 
+
+    .container{
+        padding-left:0 !important;
+        padding-right: 0 !important;
+    }
+
+    .testimonial-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .testimonial-track {
+        will-change: transform;
+    }
+    
+    .testimonial-item {
+        flex: 0 0 auto;
+        width: 415px;
+
+        @media screen and (max-width: 767.98px) {
+            width: 300px;
+        }
+
+            
+    }
 }

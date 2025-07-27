@@ -4,6 +4,7 @@ gsap.utils.toArray(".fade-slide-up").forEach((el) => {
       trigger: el,
       start: "top 80%",
       toggleActions: "play none none reverse",
+      once: true,
     },
     opacity: 0,
     y: 40,
@@ -17,6 +18,7 @@ gsap.from(".item", {
     trigger: ".item",
     start: "top 80%",
     toggleActions: "play none none none",
+    once: true,
   },
   opacity: 0,
   y: 40,
@@ -31,6 +33,7 @@ gsap.utils.toArray(".fade-left-up").forEach((el) => {
       trigger: el,
       start: "top 85%",
       toggleActions: "play none none none",
+      once: true,
     },
     opacity: 0,
     x: -60,
@@ -46,6 +49,7 @@ gsap.utils.toArray(".fade-right-up").forEach((el) => {
       trigger: el,
       start: "top 85%",
       toggleActions: "play none none none",
+      once: true,
     },
     opacity: 0,
     x: 60,
@@ -60,20 +64,43 @@ gsap.from(".big-bang", {
     trigger: ".big-bang",
     start: "top 65%",
     toggleActions: "play none none none",
+    once: true,
   },
-  scale: 0.001, // Start small like a dot
+  scale: 0.001,
   opacity: 0,
-  duration: 2, // Slightly faster to keep it snappy
+  duration: 2,
   ease: "power4.out",
 });
 
-// Duplicate testimonials for smooth loop
-const track = document.querySelector(".testimonial-track");
-track.innerHTML += track.innerHTML;
+// Carousel like looping effect
 
-gsap.to(track, {
-  xPercent: -50,
-  duration: 20,
-  ease: "none",
-  repeat: -1,
-});
+function loopTestimonials() {
+  const track = document.querySelector(".testimonial-track");
+  const items = gsap.utils.toArray(".testimonial-item");
+
+  if (!track || items.length < 2) return;
+
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  const itemWidth = items[0].offsetWidth;
+  const totalWidth = itemWidth * items.length;
+
+  const tl = gsap.to(track, {
+    x: `-=${totalWidth}`,
+    duration: items.length * 10,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+    },
+  });
+
+  // Pause on hover
+  track.addEventListener("mouseenter", () => tl.pause());
+  track.addEventListener("mouseleave", () => tl.play());
+}
+
+window.addEventListener("load", loopTestimonials);
