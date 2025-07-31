@@ -10858,7 +10858,7 @@ textarea.form-control-lg {
 .menu {
   color: white !important;
 }
-.menu a {
+.menu ul li a {
   color: white !important;
 }
 .menu .navbar-collapse {
@@ -22420,6 +22420,7 @@ footer .soc_media_link {
   color: white;
   border-radius: 16px;
   border-bottom-right-radius: 0;
+  opacity: 1;
 }
 @media screen and (max-width: 1400px) {
   .trending .box .card {

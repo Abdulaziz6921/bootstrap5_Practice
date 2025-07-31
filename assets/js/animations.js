@@ -1,8 +1,14 @@
+// ✅ Use ESM-compatible URLs:
+import gsap from "https://esm.sh/gsap@3.12.5";
+import ScrollTrigger from "https://esm.sh/gsap@3.12.5/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.utils.toArray(".fade-slide-up").forEach((el) => {
   gsap.from(el, {
     scrollTrigger: {
       trigger: el,
-      start: "top 80%",
+      start: "top 85%",
       toggleActions: "play none none reverse",
       once: true,
     },
@@ -16,7 +22,7 @@ gsap.utils.toArray(".fade-slide-up").forEach((el) => {
 gsap.from(".item", {
   scrollTrigger: {
     trigger: ".item",
-    start: "top 80%",
+    start: "top 85%",
     toggleActions: "play none none none",
     once: true,
   },
@@ -62,7 +68,7 @@ gsap.utils.toArray(".fade-right-up").forEach((el) => {
 gsap.from(".big-bang", {
   scrollTrigger: {
     trigger: ".big-bang",
-    start: "top 65%",
+    start: "top 85%",
     toggleActions: "play none none none",
     once: true,
   },

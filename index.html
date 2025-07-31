@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap5 Practice</title>
+    <title>Learnico</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -16,13 +16,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- Include globally (NOT module type) -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-    </script>
-
 
 
 </head>
@@ -30,259 +23,8 @@
 <body>
 
     <main>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-primary menu">
-            <div class="container">
-                <!-- Logo  -->
-                <a class="navbar-brand text-white d-flex align-items-center " href="#">
-                    <img src="./images/logo.svg" alt="Logo" width="139" height="34">
-
-                </a>
-
-                <div class="nav-buttons d-flex align-items-center gap-2 order-lg-1 ">
-                    <div class="d-flex align-items-center">
-                        <div class="cart me-lg-3 d-flex">
-                            <span class="pe-1"><i class="bi bi-cart-fill"></i></span> Cart
-                        </div>
-
-                        <button type="button" class="btn btn-light d-none d-md-block ">Sign up</button>
-                    </div>
-
-                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse mx-auto flex-row-reverse" id="navbarNav">
-                    <div
-                        class="search_input ms-lg-auto d-flex align-items-center justify-content-lg-end px-lg-0 mt-3 mt-lg-0 me-1">
-                        <label class="visually-hidden" for="searchInput">Search</label>
-                        <span class="pe-1"><i class="bi bi-search"></i></span>
-                        <input id="searchInput" type="search" placeholder="Search"
-                            class="bg-primary text-white border-0 w-50" />
-                    </div>
-                    <ul class="navbar-nav mb-2 mb-lg-0 gap-3 flex-grow-1 justify-content-end me-lg-5 me-2">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <!-- ✅ Fullscreen Bootstrap Dropdown with Left (Courses) and Right (Blogs) -->
-                        <li class="nav-item dropdown position-static ">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="megaDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Courses
-                                <i class="bi bi-chevron-down ms-2 transition" id="dropdown-icon"></i>
-                            </a>
-
-
-                            <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg bg-white "
-                                aria-labelledby="megaDropdown">
-                                <div class="container">
-                                    <div class="row">
-
-                                        <!-- ✅ LEFT SIDE: Trending Courses -->
-                                        <div class="col-lg-7 px-md-5 py-md-5 py-3">
-                                            <p class="fw-semibold mb-3">Trending Courses</p>
-                                            <div class="row g-3">
-                                                <!-- Course 1 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/design-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="design-course">
-                                                            <div>
-                                                                <div class="fw-semibold">Design Composition Masterclass
-                                                                </div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-
-                                                    </div>
-                                                </div>
-
-                                                <!-- Course 2 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/UX-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="UX-course">
-                                                            <div>
-                                                                <div class="fw-semibold">Basic UI/UX Principles</div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Course 3 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/figma-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="">
-                                                            <div>
-                                                                <div class="fw-semibold">Figma Basics</div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Course 4 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/CMS-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="">
-                                                            <div>
-                                                                <div class="fw-semibold">Advanced CMS and Integrations
-                                                                </div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Course 5 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/webflow-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="">
-                                                            <div>
-                                                                <div class="fw-semibold">Webflow Interactions
-                                                                    Masterclass
-                                                                </div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Course 6 -->
-                                                <div class="col-lg-6 ">
-                                                    <div class="p-2 rounded-3 hover-bg">
-                                                        <a href="#" class="d-flex text-decoration-none text-dark">
-                                                            <img src="./images/w-basics-course.jpg" class="rounded me-3"
-                                                                style="width: 80px; height: 80px; object-fit: cover;"
-                                                                alt="">
-                                                            <div>
-                                                                <div class="fw-semibold">Webflow Basics
-                                                                </div>
-                                                                <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                    consectetur adipiscing
-                                                                    elit.</small>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <!-- ✅ RIGHT SIDE: Featured from Blog -->
-                                        <div class="col-lg-5 py-5 ps-4 overlay-wrapper">
-                                            <p class="mb-4 fw-semibold">Featured from Blog</p>
-                                            <div class="row g-4">
-
-                                                <!-- Blog Post 1 -->
-                                                <div class="col-12">
-                                                    <a href="#"
-                                                        class="d-flex flex-column flex-md-row  text-dark gap-3 align-items-lg-center ">
-                                                        <div class="rounded overflow-hidden blog_part">
-                                                            <img src="./images/blog-1.jpg"
-                                                                class="w-100 h-100 img-hover-zoom object-fit-cover"
-                                                                alt="blog-1">
-                                                        </div>
-
-                                                        <div class="d-flex flex-column justify-content-center gap-2">
-                                                            <div class="fw-semibold">40 productivity Figma tips & tricks
-                                                            </div>
-                                                            <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                consectetur adipiscing elit. Suspendisse varius enim in
-                                                                eros.</small>
-
-                                                            <button type="button"
-                                                                class="btn1 bg-transparent text-primary p-0"
-                                                                style="font-size: 14px;">
-                                                                Read more <i class="bi bi-chevron-right"
-                                                                    style="font-size: 12px;"></i>
-                                                            </button>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                                <!-- Blog Post 2 -->
-
-                                                <div class="col-12">
-                                                    <a href="#"
-                                                        class="d-flex flex-column flex-md-row align-items-lg-center text-dark gap-3">
-                                                        <div class="rounded overflow-hidden blog_part">
-                                                            <img src="./images/blog-2.jpg"
-                                                                class="w-100 h-100 img-hover-zoom object-fit-cover"
-                                                                alt="">
-                                                        </div>
-
-                                                        <div class="d-flex flex-column justify-content-center gap-2">
-                                                            <div class="fw-semibold">Why you should forget wireframes
-                                                            </div>
-                                                            <small class="text-muted">Lorem ipsum dolor sit amet,
-                                                                consectetur adipiscing elit. Suspendisse varius enim in
-                                                                eros.</small>
-
-                                                            <button type="button"
-                                                                class="btn1 bg-transparent text-primary p-0"
-                                                                style="font-size: 14px;">
-                                                                Read more <i class="bi bi-chevron-right"
-                                                                    style="font-size: 12px;"></i>
-                                                            </button>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-
-                                            <div class="mt-4">
-                                                <button href="/blog" type="button"
-                                                    class="btn1 bg-transparent text-primary fw-semibold">See all
-                                                    articles <i class="bi bi-chevron-right"
-                                                        style="font-size: 14px;"></i></button>
-                                            </div>
-
-                                            <div class="dropdown-right-overlay"></div>
-                                        </div>
-
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-        </nav>
+        <!-- Navbar Include -->
+        <div data-include="partials/navbar.html"></div>
 
         <!-- Header -->
         <header id=" home" class=" searchable-section header container-fluid d-flex align-items-center ">
@@ -587,34 +329,23 @@
                 <div class="testimonial-wrapper overflow-hidden w-100 mt-5">
                     <div class="testimonial-track d-flex gap-3 gap-md-4 align-items-center">
                         <div class="testimonial-item text-center">
-                            <h1>h1</h1>
                             <img src="./images/Frame@2x.png" alt="Student testimonial 1" class="img-fluid" />
                         </div>
                         <div class="testimonial-item text-center">
-                            <h1>h2</h1>
-
                             <img src="./images/Frame@2x.png" alt="Student testimonial 2" class="img-fluid" />
                         </div>
                         <div class="testimonial-item text-center">
-                            <h1>h3</h1>
-
                             <img src="./images/Frame@2x.png" alt="Student testimonial 3" class="img-fluid" />
                         </div>
 
 
                         <div class="testimonial-item text-center">
-                            <h1>h4</h1>
-
                             <img src="./images/Frame@2x.png" alt="Student testimonial 1" class="img-fluid" />
                         </div>
                         <div class="testimonial-item text-center">
-                            <h1>h5</h1>
-
                             <img src="./images/Frame@2x.png" alt="Student testimonial 2" class="img-fluid" />
                         </div>
                         <div class="testimonial-item text-center">
-                            <h1>h6</h1>
-
                             <img src="./images/Frame@2x.png" alt="Student testimonial 3" class="img-fluid" />
                         </div>
                     </div>
@@ -729,119 +460,22 @@
 
 
     <!-- Footer -->
-    <footer class="container-fluid bg-primary pb-5">
-
-        <!-- Footer-top  -->
-        <div class="container row mx-auto px-0 d-flex align-items-center text-white">
-            <div class="col-lg-4 ps-lg-0 py-5">
-                <p class="pe-5">Join our newsletter to stay up to date
-                    on features and releases.</p>
-
-                <div class="w-100 d-lg-flex justify-content-between">
-                    <input type="text">
-                    <button class="btn1">Subscribe</button>
-                </div>
-
-                <p style="font-size:12px; margin-top: 19px;">and provide
-                    consent to receive updates from our company.
-                </p>
-            </div>
-            <div class="col-lg-8  px-0 py-5">
-                <div class="container-fluid row mx-auto">
-                    <div class="col-md-6 d-flex justify-content-between">
-                        <div class="col-6 ">
-
-                            <ul>
-                                <p class="fw-bold">Pages</p>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Teachers</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-6">
-
-                            <ul>
-                                <p class="fw-bold">CMS Pages</p>
-                                <li><a href="#">Blog Post</a></li>
-                                <li><a href="#">Blog Categories</a></li>
-                                <li><a href="#">Courses Single</a></li>
-                                <li><a href="#">Courses Categories</a>
-                                </li>
-                                <li><a href="#">Product Page</a></li>
-                                <li><a href="#">Product Categories</a>
-                                </li>
-                                <li><a href="#">Teachers Single</a></li>
-                                <li><a href="#">Episode Single</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 d-flex justify-content-between">
-                        <div class="col-6">
-
-                            <ul>
-                                <p class="fw-bold">Account Pages</p>
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Sign Up</a></li>
-                                <li><a href="#">Forgot Password</a></li>
-                                <li><a href="#">Reset Password</a></li>
-                                <li><a href="#">Email Confirmation</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        <div class="col-6">
-
-                            <ul>
-                                <p class="fw-bold">Utility Pages</p>
-                                <li><a href="#">Style Guide</a></li>
-                                <li><a href="#">Changelog</a></li>
-                                <li><a href="#">Licenses</a></li>
-                                <li><a href="#">404</a></li>
-                                <li><a href="#">Password</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Footer-bottom  -->
-        <div
-            class="container border-white border-top row mx-auto pt-5 d-flex justify-content-between flex-column-reverse flex-md-row">
-            <div class="col-md-8 col-xl-5 col-xxl-4 mt-5 mt-md-0 text-white text-center d-md-flex align-items-start">
-                <p>© Learnico by
-                    Minimal Square
-                    . Powered by
-                    Webflow
-                    .</p>
-            </div>
-            <div
-                class="col-4 col-md-2 col-xxl-1 d-flex justify-content-between align-items-center px-0 mx-auto mx-md-0">
-
-                <div class="soc_media_link"><a href="#"><i class="bi bi-facebook"></i></a></div>
-
-
-                <div class="soc_media_link"><a href="#"><i class="bi bi-twitter"></i></a></div>
-
-                <div class="soc_media_link"><a href="#"><i class="bi bi-instagram"></i></a></div>
-
-
-            </div>
-        </div>
-    </footer>
+    <div data-include="partials/footer.html"></div>
 
     <!-- Js functions  -->
-    <script type="module" src="./assets/js/search.js"></script>
+
+
+    <script src="./assets/js/include.js"></script>
 
     <script type="module" src="./assets/js/animations.js"></script>
+    <script type="module" src="./assets/js/search.js"></script>
+
+
+
+
+
+
+
 
 
 
