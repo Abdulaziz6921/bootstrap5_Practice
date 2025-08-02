@@ -10873,11 +10873,6 @@ textarea.form-control-lg {
   width: 80px;
   height: fit-content;
 }
-@media screen and (max-width: 343.98px) {
-  .menu .cart {
-    display: none !important;
-  }
-}
 .menu .nav-buttons button {
   width: 106px;
   height: 45px;
@@ -22184,29 +22179,28 @@ textarea.form-control-lg {
 .benefits .inner-one {
   height: fit-content;
 }
-.benefits .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.benefits .wrapper .wrap {
+.benefits .wrap {
   width: 100%;
   height: 38%;
-  display: flex;
+  display: flex !important;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 0 26px;
 }
+.benefits .wrap img {
+  margin-bottom: 1rem;
+}
 .benefits .middle_img {
   height: 600px;
+  width: auto;
 }
 .benefits .middle_img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 30px;
 }
 
 .blog {
