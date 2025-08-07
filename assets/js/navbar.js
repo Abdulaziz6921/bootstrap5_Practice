@@ -3,7 +3,9 @@ const signUpBtn = document.querySelector("#signUpBtn");
 const nameDisplay = document.querySelector("#userName");
 
 if (user && user.name && nameDisplay) {
-  signUpBtn.remove();
+  if (signUpBtn) {
+    signUpBtn.remove();
+  }
 
   // Set name
   nameDisplay.textContent = user.name;
