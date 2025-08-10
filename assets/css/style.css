@@ -22244,7 +22244,7 @@ textarea.form-control-lg {
 }
 
 footer {
-  height: fit-content;
+  min-height: 600px !important;
 }
 footer input {
   width: 64%;

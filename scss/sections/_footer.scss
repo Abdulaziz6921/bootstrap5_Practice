@@ -1,7 +1,7 @@
 @use "../custom" as *;
 
 footer{
-    height: fit-content;
+    min-height: 600px!important;
 
     input{
         width:64%;

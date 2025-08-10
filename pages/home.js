@@ -1,0 +1,439 @@
+export default function HomePage() {
+  return `
+     <main>
+
+        <!-- Header -->
+        <header class="searchable-section header container-fluid d-flex align-items-center">
+            <div class="container row mx-auto d-flex justify-content-between align-items-center">
+                <div class="col-md-6 d-flex flex-column justify-content-between fade-left-up">
+                    <h1 class="head1">Become a No-Code expert and find a job
+                    </h1>
+
+                    <p class="lorem text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum vel
+                        molestie magna. Curabitur tincidunt nunc sit amet.
+                    </p>
+
+                    <div class="mb-3 ">
+                        <button type="button" class="btn1 ">Explore
+                            Courses</button>
+                        <button type="button" class="btn1 bg-transparent text-white">Watch
+                            Video</button>
+                    </div>
+
+                    <img src="./images/Frame.png" alt="Platform Mockup" class="img-fluid">
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-end position-relative fade-right-up">
+                    <img src="./images/IMAGE.png" alt="Illustration" class="img-fluid h-100 mt-5 mt-md-0 w-auto" />
+
+                    <div class="img2 d-none d-xxl-block position-absolute">
+                        <img src="./images/IMAGEs.png" alt="Decorative Element" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section id="about" class=" searchable-section about bg-white py-5 ">
+            <div
+                class="container bg-warning rounded-4 d-flex justify-content-center align-items-center p-4 fade-slide-up">
+                <div class="inner text-center">
+                    <button class="section_btn mb-3">About us</button>
+                    <h2 class="head2">No-code Education Platform</h2>
+                    <p class="lorem">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Suspendisse
+                        varius enim in eros elementum tristique. Duis
+                        cursus, mi quis viverra
+                        ornare, eros dolor interdum nulla, ut commodo diam
+                        libero vitae erat.
+                    </p>
+                    <button class="btn1 bg-primary text-white">About
+                        us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Courses -->
+        <section class="searchable-section container-fluid bg-white d-flex align-items-center py-5">
+            <div class="container row h-100 justify-content-between align-items-center mx-auto px-0 gap-5 gap-md-0">
+
+                <div class="col-md-6 d-flex justify-content-start fade-left-up">
+                    <img src="./images/IMAGE3.png" alt="Instructor illustration" class="img-fluid h-100">
+                </div>
+
+                <div class="col-md-6 text_side d-flex flex-column justify-content-between fade-right-up">
+                    <h2 class="head2">Premium courses from the industry
+                        leaders</h2>
+                    <p class="lorem py-4">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Suspendisse varius enim
+                        in
+                        eros elementum tristique. Duis cursus, mi quis
+                        viverra ornare.</p>
+                    <div>
+                        <button type="button" class="btn1 bg-primary">Get
+                            started</button>
+                        <button type="button" class="btn1 bg-transparent text-primary">
+                            Learn more <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Course Section -->
+        <section class="searchable-section container-fluid bg-white d-flex align-items-start py-5">
+            <div
+                class="container row h-100 mx-auto justify-content-between align-items-center flex-md-row-reverse gap-5 gap-md-0">
+
+                <div class="col-md-6 d-flex justify-content-end fade-right-up">
+                    <img src="./images/adfjkalk5.png" alt="Person choosing course" class="img-fluid h-100">
+                </div>
+
+                <div class="col-md-6 text_side d-flex flex-column justify-content-between fade-left-up">
+                    <h2 class="head2">Easily find the perfect course for you
+                    </h2>
+                    <p class="lorem py-4">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Suspendisse varius enim
+                        in
+                        eros elementum tristique. Duis cursus, mi quis
+                        viverra ornare.</p>
+                    <div>
+                        <button type="button" class="btn1 bg-primary">Get
+                            started</button>
+                        <button type="button" class="btn1 bg-transparent text-primary">
+                            Learn more <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trending Courses -->
+        <section id="courses" class="fade-slide-up searchable-section trending container-fluid py-5 ">
+            <div class="container text-center pt-5">
+                <button class="section_btn bg-warning">Trending</button>
+                <h2 class="head2 mt-3">The most popular courses</h2>
+                <p class="lorem">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse varius enim in eros
+                    elementum tristique. Duis cursus, mi quis viverra
+                    ornare.</p>
+            </div>
+
+            <div class="box container mx-auto px-0 row justify-content-around">
+
+                <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/af.png" alt="Webflow Basics course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Webflow Basics</h3>
+                        <p class="card-text">$24.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Enroll course</button>
+                    </div>
+                </div>
+
+                <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/IMAGE (1).png" alt="Webflow Interactions course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Webflow Interactions
+                            Masterclass</h3>
+                        <p class="card-text">$55.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Enroll course</button>
+                    </div>
+                </div>
+
+                <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/IMAGE (2).png" alt="Advanced CMS course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Advanced CMS and Integrations
+                        </h3>
+                        <p class="card-text">$38.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Enroll course</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <div id="no-results" class="py-5" style="display: none;">
+            <p class="text-center my-5 text-danger py-5">No results found.
+            </p>
+        </div>
+
+
+        <!-- Join -->
+        <section class="searchable-section join container-fluid d-flex align-items-center bg-white py-5">
+            <div class="container bg-warning row align-items-center mx-auto px-0">
+
+                <div class="col-md-6 d-flex flex-column justify-content-between px-4 py-5">
+                    <button class="section_btn mb-3">Join us</button>
+                    <h2 class="head2">Join more than 17,000+ students all
+                        over the world</h2>
+                    <p class="lorem py-3">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Suspendisse varius enim
+                        in eros elementum tristique. Duis cursus, mi quis
+                        viverra ornare.</p>
+                    <button type="button" class="btn1 bg-primary">Get
+                        started</button>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-end px-0 py-0">
+                    <img src="./images/jhghjg.png" alt="Happy student illustration" class="img-fluid w-100 h-100">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Boxes  -->
+        <section class="fade-slide-up searchable-section boxes container-fluid">
+            <div class="container row justify-content-between text-center mx-auto">
+
+                <div class="col-xl-4 mb-4">
+                    <img src="./images/Frame1.png" alt="Courses icon" class="mb-3">
+                    <h4>Browse our courses</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Suspendisse varius enim in eros elementum
+                        tristique duis cursus mi quis viverra.</p>
+                </div>
+
+                <div class="col-xl-4 mb-4">
+                    <img src="./images/Frame (1).png" alt="Secure purchase icon" class="mb-3">
+                    <h4>Purchase quickly and securely</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Suspendisse varius enim in eros elementum
+                        tristique duis cursus mi quis viverra.</p>
+                </div>
+
+                <div class="col-xl-4 mb-4">
+                    <img src="./images/Frame (2).png" alt="Start learning icon" class="mb-3">
+                    <h4>Start learning right away</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Suspendisse varius enim in eros elementum
+                        tristique duis cursus mi quis viverra.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Benefits -->
+        <section class="searchable-section benefits container">
+            <div class="text-center mb-5 ">
+                <button class="section_btn bg-warning mb-3">Benefits</button>
+                <h2 class="head2 pt-2 pb-4">Grow your knowledge from best
+                    teachers in the industry</h2>
+                <p class="lorem">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse varius enim in eros
+                    elementum tristique. Duis cursus, mi quis viverra
+                    ornare.</p>
+            </div>
+
+            <div class="row  align-items-start gap-2">
+                <!-- Left Column -->
+                <div class="col-lg-3">
+                    <div class="wrap mb-5 fade-left-up ">
+                        <img src="./images/Frame (4).png" alt="Lesson hours icon">
+                        <h3>Over 430+ hours of lessons</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in
+                            eros.</p>
+                    </div>
+                    <div class="wrap fade-left-up">
+                        <img src="./images/Frame1.png" alt="Teachers icon">
+                        <h3>40+ teachers</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in
+                            eros.</p>
+                    </div>
+                </div>
+
+                <!-- Center Image -->
+                <div class="col-lg-5 text-center middle_img fade-slide-up">
+                    <img src=" ./images/benefits.png" alt="Online learning benefits">
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-3">
+                    <div class="wrap mb-5 fade-right-up">
+                        <img src="./images/Frame (5).png" alt="Community icon">
+                        <h3>Online community</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in
+                            eros.</p>
+                    </div>
+                    <div class="wrap fade-right-up">
+                        <img src="./images/Frame (6).png" alt="Coaching icon">
+                        <h3>1-on-1 coaching</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in
+                            eros.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 mb-2">
+                <button class="btn1 bg-primary">Get started</button>
+            </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="searchable-section about testimonials bg-white py-5">
+            <div class="container bg-warning rounded-4 overflow-hidden py-5 big-bang">
+                <div class="text-center mb-4">
+                    <button class="section_btn mb-3">Testimonials</button>
+                    <h2 class="head2">What our students say</h2>
+                    <p class="lorem">Lorem ipsum dolor sit amet...</p>
+                </div>
+
+                <div class="testimonial-wrapper overflow-hidden w-100 mt-5">
+                    <div class="testimonial-track d-flex gap-3 gap-md-4 align-items-center">
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 1" class="img-fluid" />
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 2" class="img-fluid" />
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 3" class="img-fluid" />
+                        </div>
+
+
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 1" class="img-fluid" />
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 2" class="img-fluid" />
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <img src="./images/Frame@2x.png" alt="Student testimonial 3" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Blog -->
+        <section id="blog" class="searchable-section blog trending container-fluid bg-primary pt-5 ">
+
+            <div class="container pt-5 d-flex flex-column align-items-center    align-items-md-start">
+                <button class="section_btn bg-warning text-center">Blog</button>
+
+                <div
+                    class="d-flex flex-column flex-md-row  w-100 mt-3 gap-3 align-items-center justify-content-between">
+                    <h2 class="head2 text-white text-center">Our latest news</h2>
+                    <button class="btn1 bg-white text-primary">View
+                        all</button>
+                </div>
+
+
+
+            </div>
+
+            <div class="box mb-0 container mx-auto px-0 d-flex row justify-content-around bg-primary">
+                <div class="card bg-white text-primary px-0 rounded-0 fade-left-up">
+                    <img src="./images/img1.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <button class="section_btn mt-4 bg-success">Freelance</button>
+                        <div class="card-title">
+                            7 freelance mistakes to avoid
+                        </div>
+
+                        <p class="card-text">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Suspendisse varius
+                            enim in eros.</p>
+                    </div>
+
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1 text-primary bg-transparent">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    </div>
+
+
+                </div>
+
+                <div class="card bg-white text-primary px-0 rounded-0  fade-slide-up">
+                    <img src=" ./images/img2.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <button class="section_btn mt-4 bg-success">UI/UX
+                            Design</button>
+                        <div class="card-title">
+                            Brand design process explained
+                        </div>
+
+                        <p class="card-text">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Suspendisse varius
+                            enim in eros.</p>
+                    </div>
+
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1 text-primary bg-transparent">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    </div>
+
+
+                </div>
+
+                <div class="card bg-white text-primary px-0 rounded-0 fade-right-up">
+                    <img src="./images/img3.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <button class="section_btn mt-4 bg-success">Business</button>
+                        <div class="card-title pe-0">
+                            The beginner’s guide to recruiting a Webflow
+                            developer
+                        </div>
+
+                        <p class="card-text">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Suspendisse varius
+                            enim in eros.</p>
+                    </div>
+
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1 text-primary bg-transparent">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="contact" class="container d-flex flex-column justify-content-between align-items-center pb-5">
+                <h2 class="head2 text-white">Start learning today</h2>
+                <p class="lorem text-white">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Suspendisse varius enim
+                    in eros
+                    elementum
+                    tristique.</p>
+
+                <div class="pb-5">
+                    <button class="btn1 me-sm-3">Get started</button>
+                    <button class="btn1 bg-white text-primary">Contact
+                        us</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+  `;
+}
