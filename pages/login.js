@@ -3,6 +3,7 @@ export default function LoginPage() {
   <main class="login-section d-flex flex-column align-items-center justify-content-center py-5 text-white fade-slide-up">
         <h1 class="mb-3">Login</h1>
         <p class="mb-4">Please fill your email and password to login</p>
+        <div id="loginErrorMsg" class="d-none text-danger fw-semibold"></div>
 
         <form id="loginForm" class="form  bg-transparent p-4 rounded"
             style="min-width: 320px; max-width: 500px; width: 100%;">
@@ -25,10 +26,13 @@ export default function LoginPage() {
     </main>`;
 }
 
+import { createModal } from "../assets/js/components/modal.js";
+
 export function initLogin() {
   const form = document.querySelector("form");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
+  const errorMsg = document.getElementById("loginErrorMsg");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -51,9 +55,19 @@ export function initLogin() {
       localStorage.setItem("user", JSON.stringify(existingUser));
 
       // Redirect to homepage
-      window.location.href = "index.html";
+      createModal({
+        title: "Welcome Back!",
+        message: "Glad to have you here again.",
+        icon: "✔",
+        btnText: "Go Home",
+        onConfirm: () => (window.location.href = "/"),
+      });
     } else {
-      alert("Incorrect email or password.");
+      errorMsg.textContent = "⚠️ Incorrect email or password";
+      errorMsg.classList.remove("d-none");
+      setTimeout(() => {
+        errorMsg.classList.add("d-none");
+      }, 4000);
     }
   });
 }

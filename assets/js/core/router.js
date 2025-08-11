@@ -1,6 +1,6 @@
-import HomePage from "../../pages/home.js";
-import LoginPage, { initLogin } from "../../pages/login.js";
-import SignUpPage, { initSignUp } from "../../pages/signup.js";
+import HomePage from "../../../pages/home.js";
+import LoginPage, { initLogin } from "../../../pages/login.js";
+import SignUpPage, { initSignUp } from "../../../pages/signup.js";
 import { initNavbar } from "./navbar.js";
 
 export function router() {

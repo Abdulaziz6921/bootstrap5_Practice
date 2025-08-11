@@ -63,6 +63,8 @@ export default function SignUpPage() {
   `;
 }
 
+import { createModal } from "../assets/js/components/modal.js";
+
 export function initSignUp() {
   const form = document.getElementById("signUpForm");
   const nameInput = document.getElementById("name");
@@ -118,6 +120,9 @@ export function initSignUp() {
       errorMsg.textContent =
         "⚠️ This email is already registered. Please log in.";
       errorMsg.classList.remove("d-none");
+      setTimeout(() => {
+        errorMsg.classList.add("d-none");
+      }, 4500);
       return;
     }
 
@@ -129,8 +134,13 @@ export function initSignUp() {
       // Also log in the new user
       localStorage.setItem("user", JSON.stringify({ name, email }));
 
-      alert("Signed up successfully!");
-      window.location.href = "/";
+      createModal({
+        title: "Success",
+        message: "Your account has been created successfully!",
+        icon: "✔",
+        btnText: "Go Home",
+        onConfirm: () => (window.location.href = "/"),
+      });
     } else {
       form.classList.add("was-validated");
     }

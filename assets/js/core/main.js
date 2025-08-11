@@ -1,12 +1,12 @@
 import { router } from "./router.js";
-import { initSearch } from "./search.js";
+import { initSearch } from "../features/search.js";
 
 function loadPage() {
   router();
 
   requestAnimationFrame(() => {
     // ✅ Initialize animations dynamically
-    import("./animations.js").then(({ initAnimations }) => {
+    import("../features/animations.js").then(({ initAnimations }) => {
       initAnimations();
     });
 

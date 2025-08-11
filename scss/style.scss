@@ -10,7 +10,8 @@
 
 
 // // IMPORT THE SECTIONS 
-@use 'sections/navbar';
+@use './sections/modal';
+@use './sections/navbar';
 @use './sections/header';
 @use './sections/about';
 @use './sections/benefits';
