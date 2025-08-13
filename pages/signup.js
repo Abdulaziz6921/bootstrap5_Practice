@@ -26,8 +26,7 @@ export default function SignUpPage() {
                 <label for="password" class="form-label">Password:</label>
                 <div class="input-group">
                     <input type="password" class="form-control p-2" id="password" placeholder="Password" required
-                        minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$"
-                        autocomplete="new-password" />
+                        minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$" title="Must be at least 8 characters, include uppercase, lowercase, a number, and a special character" autocomplete="new-password" />
 
                     <button class="btn btn-outline-primary text-white border-white border-2 border"
                         style="border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" type="button"
@@ -35,7 +34,7 @@ export default function SignUpPage() {
                         Show
                     </button>
                     <div class="invalid-feedback">
-                        Password must be at least 8 characters, with uppercase, lowercase, and a number.
+                        Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character
                     </div>
 
                 </div>
@@ -63,7 +62,7 @@ export default function SignUpPage() {
   `;
 }
 
-import { createModal } from "../assets/js/components/modal.js";
+import { showModal } from "../assets/js/components/modal.js";
 
 export function initSignUp() {
   const form = document.getElementById("signUpForm");
@@ -103,9 +102,7 @@ export function initSignUp() {
     const nameValid = /^[A-Za-z]{3,20}$/.test(name);
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const passwordValid =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s])[A-Za-z\d@$!%*?&^#()._-]{8,}$/.test(
-        password
-      );
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/.test(password);
 
     nameInput.classList.toggle("is-invalid", !nameValid);
     emailInput.classList.toggle("is-invalid", !emailValid);
@@ -134,12 +131,14 @@ export function initSignUp() {
       // Also log in the new user
       localStorage.setItem("user", JSON.stringify({ name, email }));
 
-      createModal({
+      showModal({
         title: "Success",
         message: "Your account has been created successfully!",
-        icon: "✔",
-        btnText: "Go Home",
-        onConfirm: () => (window.location.href = "/"),
+        icon: { className: "bi bi-check2", ariaLabel: "Success" },
+        primaryButton: {
+          text: "Go Home",
+          action: () => (window.location.href = "/"),
+        },
       });
     } else {
       form.classList.add("was-validated");

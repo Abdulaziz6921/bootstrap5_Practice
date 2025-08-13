@@ -34,7 +34,6 @@ export function initAnimations() {
         once: true,
       },
       opacity: 0,
-      y: 40,
       duration: 1,
       ease: "power2.out",
       stagger: 0.5,

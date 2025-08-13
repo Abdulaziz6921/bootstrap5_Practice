@@ -1,3 +1,4 @@
+import { showModal } from "../components/modal.js"; // adjust path if needed
 export function initNavbar() {
   const user = JSON.parse(localStorage.getItem("user"));
   const signUpBtn = document.querySelector("#signUpBtn");
@@ -30,9 +31,9 @@ export function initNavbar() {
     const logoutBtn = document.createElement("button");
     logoutBtn.id = "logoutBtn";
     logoutBtn.textContent = "Log out";
-    logoutBtn.className = "btn btn-danger position-absolute d-none";
-    logoutBtn.style.top = "100%";
-    logoutBtn.style.left = "0";
+    logoutBtn.className =
+      "btn btn-danger position-absolute d-none top-100 start-50 translate-middle-x fs-6";
+    logoutBtn.style.padding = "7px 14px";
 
     nameDisplay.classList.add("position-relative");
     nameDisplay.appendChild(logoutBtn);
@@ -47,8 +48,28 @@ export function initNavbar() {
 
     // Handle logout
     logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("user");
-      window.location.reload();
+      showModal({
+        title: "Confirm Logout",
+        message: "Are you sure you want to log out?",
+        icon: {
+          className: "bi bi-box-arrow-right text-white",
+          ariaLabel: "Logout",
+        },
+        isDismissible: true,
+        primaryButton: {
+          text: "Yes, log me out",
+          className: "btn btn-danger",
+          action: () => {
+            localStorage.removeItem("user");
+            window.location.hash = "/";
+            location.reload();
+          },
+        },
+        secondaryButton: {
+          text: "No, keep me in",
+          className: "btn btn-secondary text-white",
+        },
+      });
     });
   }
 }

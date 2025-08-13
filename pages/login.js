@@ -26,7 +26,7 @@ export default function LoginPage() {
     </main>`;
 }
 
-import { createModal } from "../assets/js/components/modal.js";
+import { showModal } from "../assets/js/components/modal.js";
 
 export function initLogin() {
   const form = document.querySelector("form");
@@ -55,12 +55,14 @@ export function initLogin() {
       localStorage.setItem("user", JSON.stringify(existingUser));
 
       // Redirect to homepage
-      createModal({
+      showModal({
         title: "Welcome Back!",
         message: "Glad to have you here again.",
-        icon: "✔",
-        btnText: "Go Home",
-        onConfirm: () => (window.location.href = "/"),
+        icon: { className: "bi bi-check2", ariaLabel: "Success" },
+        primaryButton: {
+          text: "Go Home",
+          action: () => (window.location.href = "/"),
+        },
       });
     } else {
       errorMsg.textContent = "⚠️ Incorrect email or password";
