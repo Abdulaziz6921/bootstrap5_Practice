@@ -127,20 +127,20 @@ export default function HomePage() {
 
                 <!-- Course Card -->
                 <div class="item card col-md-4 mb-4 bounce-hover">
-                    <img src="./images/af.png" alt="Webflow Basics course thumbnail" class="card_img">
+                    <img src="./images/w-basics-course.jpg" alt="Webflow Basics course thumbnail" class="card_img">
                     <div class="card-body">
                         <button class="section_btn mt-4">Beginner</button>
                         <h3 class="card-title">Webflow Basics</h3>
                         <p class="card-text">$24.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Enroll course</button>
+                        <button class="btn1">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Course Card -->
                 <div class="item card col-md-4 mb-4 bounce-hover">
-                    <img src="./images/IMAGE (1).png" alt="Webflow Interactions course thumbnail" class="card_img">
+                    <img src="./images/webflow-course.jpg" alt="Webflow Interactions course thumbnail" class="card_img">
                     <div class="card-body">
                         <button class="section_btn mt-4">Beginner</button>
                         <h3 class="card-title">Webflow Interactions
@@ -148,13 +148,13 @@ export default function HomePage() {
                         <p class="card-text">$55.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Enroll course</button>
+                        <button class="btn1">Add to Cart</button>
                     </div>
                 </div>
 
                 <!-- Course Card -->
                 <div class="item card col-md-4 mb-4 bounce-hover">
-                    <img src="./images/IMAGE (2).png" alt="Advanced CMS course thumbnail" class="card_img">
+                    <img src="./images/CMS-course.jpg" alt="Advanced CMS course thumbnail" class="card_img">
                     <div class="card-body">
                         <button class="section_btn mt-4">Beginner</button>
                         <h3 class="card-title">Advanced CMS and Integrations
@@ -162,7 +162,46 @@ export default function HomePage() {
                         <p class="card-text">$38.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Enroll course</button>
+                        <button class="btn1">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/figma-course.jpg" alt="Figma basics course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Figma Basics</h3>
+                        <p class="card-text">$28.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/UX-course.jpg" alt="Basic UI/UX Principles course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Basic UI/UX Principles</h3>
+                        <p class="card-text">$33.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <!-- Course Card -->
+                <div class="item card col-md-4 mb-4 bounce-hover">
+                    <img src="./images/design-course.jpg" alt="Design Composition Masterclass course thumbnail" class="card_img">
+                    <div class="card-body">
+                        <button class="section_btn mt-4">Beginner</button>
+                        <h3 class="card-title">Design Composition Masterclass</h3>
+                        <p class="card-text">$72.00 USD</p>
+                    </div>
+                    <div class="card_footer ms-3 mb-4">
+                        <button class="btn1">Add to Cart</button>
                     </div>
                 </div>
 

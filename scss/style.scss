@@ -5,12 +5,13 @@
 // IMPORT THE COMPONENTS 
 
 @use './components/buttons';
+@use './components/cart';
 @use './components/mixins';
+@use './components/modal';
 @use './components/typography';
 
 
 // // IMPORT THE SECTIONS 
-@use './sections/modal';
 @use './sections/navbar';
 @use './sections/header';
 @use './sections/about';

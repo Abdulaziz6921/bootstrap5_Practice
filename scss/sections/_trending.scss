@@ -26,7 +26,6 @@
             
         }
 
-
         .card {
                 width: 405px;
                 height: 500px;
@@ -36,9 +35,11 @@
                 position: relative;
                 z-index: 2;
                 color: white;
+                font-weight: 600 !important;
                 border-radius: 16px;
                 border-bottom-right-radius: 0;
                 opacity: 1;
+                overflow: hidden;
 
                 @media screen and (max-width:1400px) {
                     width: 330px;
@@ -70,11 +71,17 @@
                 .card_img {
                     height: 315px;
                     width: 315px;
-                    object-fit: contain;
+                    object-fit: cover;
                     position: absolute;
                     z-index: -1;
-                    bottom: 0;
-                    right: -48px;
+                    bottom: -40px;
+                    right: -105px;
+                    border-radius: 50%;
+                }
+
+                .card_footer button{
+                    font-weight: 600;
+
                 }
         
         
