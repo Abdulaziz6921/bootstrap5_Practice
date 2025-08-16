@@ -1,6 +1,6 @@
 @use "../custom" as *;
 
-footer{
+footer:not(.lc-cart__footer){
     min-height: 600px!important;
 
     input{

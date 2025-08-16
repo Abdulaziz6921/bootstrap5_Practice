@@ -1,6 +1,7 @@
 import HomePage from "../../../pages/home.js";
 import LoginPage, { initLogin } from "../../../pages/login.js";
 import SignUpPage, { initSignUp } from "../../../pages/signup.js";
+import { initCart } from "../components/cart.js";
 import { initNavbar } from "./navbar.js";
 
 export function router() {
@@ -17,6 +18,7 @@ export function router() {
   switch (route) {
     case "/":
       app.innerHTML = HomePage();
+      initCart();
       break;
 
     case "/signup":

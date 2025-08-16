@@ -134,7 +134,7 @@ export default function HomePage() {
                         <p class="card-text">$24.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
                         <p class="card-text">$55.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
@@ -162,7 +162,7 @@ export default function HomePage() {
                         <p class="card-text">$38.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@ export default function HomePage() {
                         <p class="card-text">$28.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
@@ -188,7 +188,7 @@ export default function HomePage() {
                         <p class="card-text">$33.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
@@ -201,7 +201,7 @@ export default function HomePage() {
                         <p class="card-text">$72.00 USD</p>
                     </div>
                     <div class="card_footer ms-3 mb-4">
-                        <button class="btn1">Add to Cart</button>
+                        <button class="btn1 addBtn">Add to Cart</button>
                     </div>
                 </div>
 
