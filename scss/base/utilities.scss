@@ -26,3 +26,31 @@
 }
 
 
+.about-numbers {
+    display: grid;
+    gap: 2rem;
+    justify-content: start;
+    align-items: start;
+
+    // Mobile: column (≤ 480px)
+    grid-template-columns: 1fr;
+
+    // Larger than 480px: row
+    @media (min-width: 481px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-numbers-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .heading-xlarge {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .text-color-primary {
+            color: var(--bs-primary);
+        }
+    }
+}

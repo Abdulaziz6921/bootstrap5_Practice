@@ -3,29 +3,22 @@ export function initCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   // ---- SELECTORS ----
-  const cartBtns = document.querySelectorAll(".cart-btn"); // open cart buttons
-  const cartEl = document.querySelector(".lc-cart"); // cart drawer element
-  const cartOverlay = document.querySelector(".lc-cart__overlay");
-  const closeCartBtn = document.querySelector(".lc-cart__close");
-  const addToCartBtns = document.querySelectorAll(".addBtn"); // "Add to Cart"
+  const cartEl = document.querySelector(".lc-cart");
+  const toggleCartBtns = document.querySelectorAll("[data-cart-toggle]");
+  const addToCartBtns = document.querySelectorAll(".addBtn");
   const cartItemsContainer = document.getElementById("cartItems");
   const cartEmpty = document.getElementById("cartEmpty");
   const cartSubtotal = document.getElementById("cartSubtotal");
-  const cartBadges = document.querySelectorAll(".lc-cart__badge"); // ✅ both badges
+  const cartBadges = document.querySelectorAll(".lc-cart__badge");
+  const cartFooter = document.querySelector(".lc-cart__footer");
+
+  console.log(toggleCartBtns);
 
   // ---- CART TOGGLE ----
-  cartBtns.forEach((btn) =>
+  toggleCartBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      cartEl.classList.add("is-open");
-    })
-  );
-
-  closeCartBtn.addEventListener("click", () => {
-    cartEl.classList.remove("is-open");
-  });
-
-  cartOverlay.addEventListener("click", () => {
-    cartEl.classList.remove("is-open");
+      cartEl.classList.toggle("is-open");
+    });
   });
 
   // ---- UPDATE BADGE ----
@@ -44,12 +37,14 @@ export function initCart() {
     if (cart.length === 0) {
       cartEmpty.hidden = false;
       cartSubtotal.textContent = "$0.00";
+      if (cartFooter) cartFooter.style.display = "none";
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartBadge();
       return;
     }
 
     cartEmpty.hidden = true;
+    if (cartFooter) cartFooter.style.display = ""; // ✅ show footer
 
     let subtotal = 0;
 

@@ -10798,4 +10798,29 @@ textarea.form-control-lg {
   transform: translateY(-15px) !important;
 }
 
+.about-numbers {
+  display: grid;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 481px) {
+  .about-numbers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about-numbers .about-numbers-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.about-numbers .about-numbers-text-wrapper .heading-xlarge {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.about-numbers .about-numbers-text-wrapper .text-color-primary {
+  color: var(--bs-primary);
+}
+
 /*# sourceMappingURL=utilities.css.map */

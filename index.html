@@ -31,11 +31,10 @@
 
             <div class="nav-buttons d-flex align-items-center gap-2  ">
                 <div class="d-flex align-items-center">
-                    <div class="cart cart-btn me-lg-3 d-flex d-lg-none">
+                    <div data-cart-toggle class="cart cart-btn me-lg-3 d-flex d-lg-none">
                         <span class="pe-1">
                             <i class="bi bi-cart-fill"></i>
                             <span class="lc-cart__badge">0</span>
-                            Cart
                         </span>
                     </div>
                 </div>
@@ -64,7 +63,7 @@
                 <ul
                     class="navbar-nav mb-2 mb-lg-0 gap-3 flex-grow-1 justify-content-end me-lg-5 me-2 order-1 order-lg-1">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#/about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <!-- ✅ Fullscreen Bootstrap Dropdown with Left (Courses) and Right (Blogs) -->
@@ -276,11 +275,11 @@
                         </div>
                     </li>
                 </ul>
-                <div class="cart cart-btn d-none align-items-center order-3 order-lg-3 d-lg-flex">
+                <div data-cart-toggle class="cart cart-btn d-none align-items-center order-3 order-lg-3 d-lg-flex">
                     <span class="pe-1">
                         <i class="bi bi-cart-fill"></i>
                         <span class="lc-cart__badge">0</span>
-                        Cart</span>
+                    </span>
                 </div>
 
                 <!-- ✅ Sign up button (last in mobile, last in desktop) -->
@@ -412,12 +411,12 @@
 
     <!-- Cart Drawer -->
     <div id="cart" class="lc-cart">
-        <div class="lc-cart__overlay" data-cart-close></div>
+        <div class="lc-cart__overlay" data-cart-toggle></div>
 
         <aside class="lc-cart__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
             <header class="lc-cart__header">
                 <h2 id="cartTitle">Your Cart</h2>
-                <button class="lc-cart__close" type="button" aria-label="Close cart" data-cart-close>&times;</button>
+                <button class="lc-cart__close" type="button" aria-label="Close cart" data-cart-toggle>&times;</button>
             </header>
 
             <div class="lc-cart__body">
@@ -444,7 +443,7 @@
 
                 <div class="lc-cart__empty" id="cartEmpty" hidden>
                     <p>Your cart is empty.</p>
-                    <button class="lc-cart__browse" type="button" data-cart-close>Continue browsing</button>
+                    <button class="lc-cart__browse" type="button" data-cart-toggle>Continue browsing</button>
                 </div>
             </div>
 

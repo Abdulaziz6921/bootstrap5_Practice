@@ -1,3 +1,4 @@
+import AboutPage from "../../../pages/about.js";
 import HomePage from "../../../pages/home.js";
 import LoginPage, { initLogin } from "../../../pages/login.js";
 import SignUpPage, { initSignUp } from "../../../pages/signup.js";
@@ -19,6 +20,10 @@ export function router() {
     case "/":
       app.innerHTML = HomePage();
       initCart();
+      break;
+
+    case "/about":
+      app.innerHTML = AboutPage();
       break;
 
     case "/signup":

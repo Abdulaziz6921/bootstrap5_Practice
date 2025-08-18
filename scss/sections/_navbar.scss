@@ -21,8 +21,10 @@
       }
 
       .cart {
-         width: 80px;
+         width: 40px;
          height: fit-content;
+         position: relative;
+         font-size: 19px;
 
          // @media screen and (max-width: 343.98px) {
          //       display: none !important;

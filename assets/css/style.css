@@ -10798,6 +10798,31 @@ textarea.form-control-lg {
   transform: translateY(-15px) !important;
 }
 
+.about-numbers {
+  display: grid;
+  gap: 2rem;
+  justify-content: start;
+  align-items: start;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 481px) {
+  .about-numbers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about-numbers .about-numbers-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.about-numbers .about-numbers-text-wrapper .heading-xlarge {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.about-numbers .about-numbers-text-wrapper .text-color-primary {
+  color: var(--bs-primary);
+}
+
 .btn1 {
   width: fit-content;
   height: fit-content;
@@ -11062,10 +11087,11 @@ textarea.form-control-lg {
   font-weight: bold;
   border-radius: 50%;
   padding: 2px 6px;
-  position: relative;
-  top: -10px;
-  left: -5px;
+  position: absolute;
+  top: -7px;
+  right: 5px;
   display: none;
+  z-index: 1;
   /* hidden when 0 */
 }
 
@@ -11226,8 +11252,10 @@ textarea.form-control-lg {
   text-indent: 1px !important;
 }
 .menu .cart {
-  width: 80px;
+  width: 40px;
   height: fit-content;
+  position: relative;
+  font-size: 19px;
 }
 .menu .nav-buttons button {
   width: 106px;
