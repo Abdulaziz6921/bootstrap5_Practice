@@ -10,14 +10,13 @@ export default function AboutPage() {
             <p class="lorem mt-3 text-white fw-semibold">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit sed nec justo tempus.
             </p>
-            
           </div>
         </div>
       </header>
 
-      <section class="searchable-section story container-fluid bg-white" >
+      <section class="searchable-section story container-fluid bg-white">
         <div class="container row mx-auto align-items-center justify-content-between" style="padding: 100px 0 50px 0;">
-        <div class="col-md-5 fade-slide-up">
+          <div class="col-md-5 fade-slide-up">
             <h1 class="head1 fw-bold">Learnico is a multidisciplinary education platform</h1>
           </div>
           <div class="col-md-6 fade-slide-up">
@@ -25,41 +24,37 @@ export default function AboutPage() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
               Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
             </p>
-             <div class="about-numbers d-grid text-center">
-  <div class="about-numbers-text-wrapper">
-    <div class="mb-1">
-      <div class="heading-xlarge text-secondary">2017</div>
-    </div>
-    <div>Founded</div>
-  </div>
-
-  <div class="about-numbers-text-wrapper">
-    <div class="mb-1">
-      <div class="heading-xlarge text-secondary">40+</div>
-    </div>
-    <div>Courses created</div>
-  </div>
-</div>
-
-           
+            <div class="about-numbers d-grid text-center">
+              <div class="about-numbers-text-wrapper">
+                <div class="mb-1">
+                  <div class="heading-xlarge text-secondary">2017</div>
+                </div>
+                <div>Founded</div>
+              </div>
+              <div class="about-numbers-text-wrapper">
+                <div class="mb-1">
+                  <div class="heading-xlarge text-secondary">40+</div>
+                </div>
+                <div>Courses created</div>
+              </div>
+            </div>
           </div>
-          
         </div>
 
         <div class="container fade-slide-up">
-        <img src="./images/about_page_img.jpg" alt="About us" class="img-fluid rounded-5">
+          <img src="./images/about_page_img.jpg" alt="About us" class="img-fluid rounded-5">
         </div>
       </section>
 
       <section class="searchable-section trending container-fluid py-5 bg-white">
-       <div class="fade-slide-up container text-center pt-5 ">
-                <button class="section_btn bg-warning">About us</button>
-                <h2 class="head2 mt-3 fw-bold">People come first</h2>
-                <p class="lorem">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Suspendisse varius enim in eros
-                    elementum tristique. Duis cursus, mi quis viverra
-                    ornare.</p>
-            </div>
+        <div class="fade-slide-up container text-center pt-5">
+          <button class="section_btn bg-warning">About us</button>
+          <h2 class="head2 mt-3 fw-bold">People come first</h2>
+          <p class="lorem">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+            elementum tristique. Duis cursus, mi quis viverra ornare.
+          </p>
+        </div>
       </section>
 
       <!-- Our Team -->
