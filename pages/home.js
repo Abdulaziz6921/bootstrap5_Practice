@@ -403,9 +403,9 @@ export default function HomePage() {
                             enim in eros.</p>
                     </div>
 
-                    <div class="card_footer ms-3 mb-4">
-                        <button class="btn1 text-primary bg-transparent">
-                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    <div class="card_footer mb-4 ">
+                        <a class="btn1 text-primary bg-transparent text-decoration-none">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></a>
                     </div>
 
 
@@ -425,9 +425,9 @@ export default function HomePage() {
                             enim in eros.</p>
                     </div>
 
-                    <div class="card_footer ms-3 mb-4">
-                        <button class="btn1 text-primary bg-transparent">
-                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    <div class="card_footer mb-4 ">
+                        <a class="btn1 text-primary bg-transparent text-decoration-none">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></a>
                     </div>
 
 
@@ -447,9 +447,9 @@ export default function HomePage() {
                             enim in eros.</p>
                     </div>
 
-                    <div class="card_footer ms-3 mb-4">
-                        <button class="btn1 text-primary bg-transparent">
-                            Read more <span><i class="bi-chevron-right text-primary"></i></span></button>
+                    <div class="card_footer mb-4 ">
+                        <a class="btn1 text-primary bg-transparent text-decoration-none">
+                            Read more <span><i class="bi-chevron-right text-primary"></i></span></a>
                     </div>
 
 

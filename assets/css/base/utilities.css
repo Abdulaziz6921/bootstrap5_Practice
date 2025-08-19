@@ -10823,4 +10823,17 @@ textarea.form-control-lg {
   color: var(--bs-primary);
 }
 
+.about-values-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--bs-primary);
+  font-size: 1.8rem;
+}
+
 /*# sourceMappingURL=utilities.css.map */

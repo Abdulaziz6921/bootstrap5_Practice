@@ -10823,6 +10823,19 @@ textarea.form-control-lg {
   color: var(--bs-primary);
 }
 
+.about-values-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--bs-primary);
+  font-size: 1.8rem;
+}
+
 .btn1 {
   width: fit-content;
   height: fit-content;
@@ -22605,7 +22618,7 @@ textarea.form-control-lg {
   }
 }
 .blog .card {
-  height: 655px !important;
+  height: 590px !important;
 }
 .blog .card-title {
   font-weight: 600;
@@ -22799,7 +22812,6 @@ footer:not(.lc-cart__footer) .soc_media_link {
   color: white;
   font-weight: 600 !important;
   border-radius: 16px;
-  border-bottom-right-radius: 0;
   opacity: 1;
   overflow: hidden;
 }
