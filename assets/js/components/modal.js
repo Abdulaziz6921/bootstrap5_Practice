@@ -1,8 +1,7 @@
-// modal.js
 export function showModal({
   title = "",
   message = "",
-  icon = null, // { className: "bi bi-check2", ariaLabel: "Success" }
+  icon = null,
   isDismissible = true, // click outside or X closes modal
   primaryButton = { text: "OK", className: "btn1", action: null },
   secondaryButton = null, // { text: "Cancel", className: "btn-secondary", action: null }
@@ -25,7 +24,7 @@ export function showModal({
 
   // Build secondary button if provided
   const secondaryBtnHTML = secondaryButton
-    ? `<button class="${
+    ? `<button type="button" class="${
         secondaryButton.className || "btn-secondary"
       }" id="secondaryModalBtn">
          ${secondaryButton.text || "Cancel"}
@@ -37,7 +36,7 @@ export function showModal({
     <div class="custom-modal-content">
       ${
         isDismissible
-          ? `<button class="custom-modal-close" id="closeModalBtn" aria-label="Close">&times;</button>`
+          ? `<button type="button" class="custom-modal-close" id="closeModalBtn" aria-label="Close">&times;</button>`
           : ""
       }
       ${iconHTML}
@@ -45,7 +44,7 @@ export function showModal({
       <div class="custom-modal-message">${message}</div>
       <div class="custom-modal-actions">
         ${secondaryBtnHTML}
-        <button class="${
+        <button type="button" class="${
           primaryButton.className || "btn1"
         }" id="primaryModalBtn">
           ${primaryButton.text || "OK"}

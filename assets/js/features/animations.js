@@ -17,28 +17,32 @@ export function initAnimations() {
           once: true,
         },
         opacity: 0,
-        y: 40,
-        duration: 1,
+        y: 60,
+        duration: 1.1,
         ease: "power3.out",
       });
     });
   }
 
   // Item animation
-  if (document.querySelector(".item")) {
-    gsap.from(".item", {
+  const items = document.querySelectorAll(".item");
+
+  console.log("Found items:", items.length);
+
+  items.forEach((item, i) => {
+    gsap.from(item, {
       scrollTrigger: {
-        trigger: ".item",
+        trigger: item,
         start: "top 85%",
         toggleActions: "play none none none",
         once: true,
       },
       opacity: 0,
-      duration: 1,
+      duration: 1.1,
       ease: "power2.out",
-      stagger: 0.5,
+      delay: i * 0.3,
     });
-  }
+  });
 
   // Fade left up
   const fadeLeftEls = gsap.utils.toArray(".fade-left-up");

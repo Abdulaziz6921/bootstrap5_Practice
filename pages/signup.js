@@ -63,6 +63,16 @@ export default function SignUpPage() {
 }
 
 import { showModal } from "../assets/js/components/modal.js";
+import { auth, db } from "../assets/js/features/firebase.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import {
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+import {
+  showPageLoader,
+  hidePageLoader,
+} from "../assets/js/components/loader.js";
 
 export function initSignUp() {
   const form = document.getElementById("signUpForm");
@@ -90,7 +100,7 @@ export function initSignUp() {
     })
   );
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     event.stopPropagation();
 
@@ -109,39 +119,53 @@ export function initSignUp() {
     passwordInput.classList.toggle("is-invalid", !passwordValid);
     termsCheckbox.classList.toggle("is-invalid", !agreed);
 
-    const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
-
-    const emailExists = users.some((user) => user.email === email);
-
-    if (emailExists) {
-      errorMsg.textContent =
-        "⚠️ This email is already registered. Please log in.";
-      errorMsg.classList.remove("d-none");
-      setTimeout(() => {
-        errorMsg.classList.add("d-none");
-      }, 4500);
+    if (!nameValid || !emailValid || !passwordValid || !agreed) {
+      form.classList.add("was-validated");
       return;
     }
 
-    if (nameValid && emailValid && passwordValid && agreed) {
-      const newUser = { name, email, password };
-      users.push(newUser);
-      localStorage.setItem("registeredUsers", JSON.stringify(users));
+    try {
+      // ✅ Create user in Firebase Auth
+      showPageLoader();
 
-      // Also log in the new user
-      localStorage.setItem("user", JSON.stringify({ name, email }));
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      const user = userCredential.user;
+
+      // ✅ Save extra user info in Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        name,
+        email,
+        createdAt: new Date(),
+      });
+
+      hidePageLoader();
 
       showModal({
         title: "Success",
         message: "Your account has been created successfully!",
         icon: { className: "bi bi-check2", ariaLabel: "Success" },
+        isDismissible: false,
         primaryButton: {
           text: "Go Home",
           action: () => (window.location.href = "/"),
         },
       });
-    } else {
-      form.classList.add("was-validated");
+    } catch (error) {
+      hidePageLoader(); // 🔹 Ensure loader is hidden on error
+      errorMsg.textContent = "⚠️ Something went wrong. Please try again.";
+      if (error.code === "auth/email-already-in-use") {
+        errorMsg.textContent =
+          "⚠️ This email is already registered. Please log in.";
+      }
+      errorMsg.classList.remove("d-none");
+      setTimeout(() => {
+        errorMsg.classList.add("d-none");
+      }, 4500);
     }
   });
 }

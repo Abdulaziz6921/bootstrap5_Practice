@@ -211,7 +211,7 @@ export default function HomePage() {
 
         </section>
 
-        <div id="no-results" class="py-5" style="display: none;">
+        <div class="no-results py-5" style="display: none;">
             <p class="text-center my-5 text-danger py-5">No results found.
             </p>
         </div>

@@ -3,11 +3,11 @@ import ScrollTrigger from "https://esm.sh/gsap@3.12.5/ScrollTrigger";
 export function initSearch() {
   const searchInput = document.querySelector('input[type="search"]');
   const courseSection = document.getElementById("courses");
-  const blogSection = document.getElementById("blog");
+  const blogSections = document.querySelectorAll(".blog"); // ✅ all blog sections
   const courseCards = document.querySelectorAll("#courses .card");
-  const blogCards = document.querySelectorAll("#blog .card");
+  const blogCards = document.querySelectorAll(".blog .card"); // ✅ all blog cards
   const mainSections = document.querySelectorAll(".searchable-section");
-  const noResultsMsg = document.getElementById("no-results");
+  const noResultsMsg = document.querySelectorAll(".no-results");
 
   if (!searchInput) return; // No search bar on this page
 
@@ -50,17 +50,21 @@ export function initSearch() {
 
     if (trimmed === "") {
       mainSections.forEach(showSection);
+
+      // Reset courses
       courseCards.forEach((card) => {
         card.classList.remove("d-none");
         const titleEl = card.querySelector(".card-title");
         if (titleEl) titleEl.innerHTML = titleEl.textContent;
       });
+
+      // Reset blogs
       blogCards.forEach((card) => {
         card.classList.remove("d-none");
         const titleEl = card.querySelector(".card-title");
         if (titleEl) titleEl.innerHTML = titleEl.textContent;
       });
-      noResultsMsg.style.display = "none";
+
       ScrollTrigger.refresh();
       return;
     }
@@ -70,10 +74,11 @@ export function initSearch() {
 
     mainSections.forEach(hideSection);
     if (hasCourseMatch) showSection(courseSection);
-    if (hasBlogMatch) showSection(blogSection);
+    if (hasBlogMatch) blogSections.forEach(showSection); // ✅ show all matching blogs
 
-    noResultsMsg.style.display =
-      !hasCourseMatch && !hasBlogMatch ? "block" : "none";
+    noResultsMsg.forEach((msg) => {
+      msg.style.display = hasCourseMatch || hasBlogMatch ? "none" : "block";
+    });
 
     ScrollTrigger.refresh();
   }
@@ -82,5 +87,6 @@ export function initSearch() {
   searchInput.addEventListener("input", (e) => {
     handleSearch(e.target.value);
   });
+
   ScrollTrigger.refresh();
 }

@@ -26,7 +26,65 @@ export default function LoginPage() {
     </main>`;
 }
 
+// import { showModal } from "../assets/js/components/modal.js";
+// import { auth } from "../assets/js/features/firebase.js";
+// import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+// export function initLogin() {
+//   const form = document.querySelector("form");
+//   const emailInput = document.getElementById("email");
+//   const passwordInput = document.getElementById("password");
+//   const errorMsg = document.getElementById("loginErrorMsg");
+
+//   form.addEventListener("submit", async (e) => {
+//     e.preventDefault();
+
+//     const enteredEmail = emailInput.value.trim();
+//     const enteredPassword = passwordInput.value.trim();
+
+//     try {
+//       // ✅ Login with Firebase Auth
+//       const userCredential = await signInWithEmailAndPassword(
+//         auth,
+//         enteredEmail,
+//         enteredPassword
+//       );
+//       const user = userCredential.user;
+
+//       // ✅ Store session in localStorage (for UI usage)
+//       localStorage.setItem(
+//         "user",
+//         JSON.stringify({ uid: user.uid, email: user.email })
+//       );
+
+//       // ✅ Show success modal
+//       showModal({
+//         title: "Welcome Back!",
+//         message: "Glad to have you here again.",
+//         icon: { className: "bi bi-check2", ariaLabel: "Success" },
+//         isDismissible: false,
+//         primaryButton: {
+//           text: "Go Home",
+//           action: () => (window.location.href = "/"),
+//         },
+//       });
+//     } catch (error) {
+//       console.error("Login failed:", error);
+//       errorMsg.textContent = "⚠️ " + error.message;
+//       errorMsg.classList.remove("d-none");
+//       setTimeout(() => {
+//         errorMsg.classList.add("d-none");
+//       }, 4000);
+//     }
+//   });
+// }
 import { showModal } from "../assets/js/components/modal.js";
+import { auth } from "../assets/js/features/firebase.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import {
+  showPageLoader,
+  hidePageLoader,
+} from "../assets/js/components/loader.js"; // ✅ same as signup
 
 export function initLogin() {
   const form = document.querySelector("form");
@@ -34,42 +92,59 @@ export function initLogin() {
   const passwordInput = document.getElementById("password");
   const errorMsg = document.getElementById("loginErrorMsg");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const enteredEmail = emailInput.value.trim();
     const enteredPassword = passwordInput.value.trim();
 
-    // Get existing users from localStorage
-    const users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+    try {
+      // ✅ Show loader immediately when login starts
+      showPageLoader();
 
-    // Check if user exists with matching credentials
-    const existingUser = users.find(
-      (user) =>
-        user.email.toLowerCase() === enteredEmail.toLowerCase() &&
-        user.password === enteredPassword
-    );
+      // ✅ Login with Firebase Auth
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        enteredEmail,
+        enteredPassword
+      );
+      const user = userCredential.user;
 
-    if (existingUser) {
-      // Store logged-in user info in localStorage
-      localStorage.setItem("user", JSON.stringify(existingUser));
+      // ✅ Store session in localStorage (for UI usage)
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ uid: user.uid, email: user.email })
+      );
 
-      // Redirect to homepage
+      // ✅ Hide loader before showing modal
+      hidePageLoader();
+
+      // ✅ Show success modal
       showModal({
         title: "Welcome Back!",
         message: "Glad to have you here again.",
         icon: { className: "bi bi-check2", ariaLabel: "Success" },
+        isDismissible: false,
         primaryButton: {
           text: "Go Home",
           action: () => (window.location.href = "/"),
         },
       });
-    } else {
-      errorMsg.textContent = "⚠️ Incorrect email or password";
+    } catch (error) {
+      // ✅ Hide loader if login fails
+      hidePageLoader();
+
+      if (error.code === "auth/invalid-credential") {
+        errorMsg.textContent =
+          "⚠️ Please check your email or password — they appear to be incorrect.";
+      } else {
+        errorMsg.textContent = "⚠️ Unable to sign in. Please try again.";
+      }
+      console.error("Login failed:", error);
       errorMsg.classList.remove("d-none");
       setTimeout(() => {
         errorMsg.classList.add("d-none");
-      }, 4000);
+      }, 4500);
     }
   });
 }

@@ -1,0 +1,55 @@
+@use "../custom" as *;
+.curly-loader {
+    position: relative;
+    display: inline-block; // inline-block is enough here
+    width: var(--loader-size, 80px);
+    height: var(--loader-size, 80px);
+
+    div {
+        position: absolute;
+        top: 50%; // ⬅ center vertically
+        left: 50%; // ⬅ center horizontally
+        transform-origin: center; // orbit around the center
+        width: calc(var(--loader-size, 80px) / 6);
+        height: calc(var(--loader-size, 80px) / 6);
+        background:#fff;
+        border-radius: 50%;
+        animation: curly 2.4s linear infinite;
+
+        @for $i from 1 through 12 {
+            &:nth-child(#{$i}) {
+                animation-delay: -#{($i - 1) * 0.2}s;
+            }
+        }
+    }
+
+    @keyframes curly {
+        0% {
+            transform: rotate(0deg) translateX(calc(var(--loader-size, 80px) / 2.6)) scale(0.6);
+            opacity: 0.2;
+        }
+
+        50% {
+            transform: rotate(180deg) translateX(calc(var(--loader-size, 80px) / 2.6)) scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(calc(var(--loader-size, 80px) / 2.6)) scale(0.6);
+            opacity: 0.2;
+        }
+    }
+}
+
+.loaderOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; // above everything else
+}

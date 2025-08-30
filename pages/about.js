@@ -60,7 +60,7 @@ export default function AboutPage() {
             </div>
 
             <div class="box container row mx-auto d-flex justify-content-between align-items-center mb-0">
-                <div class="card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
+                <div class="item card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
                     <div class="about-values-icon">
                         <i class="bi bi-suit-heart-fill"></i>
                     </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
                         mi quis viverra.
                     </p>
                 </div>
-                <div class="card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
+                <div class="item card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
                     <div class="about-values-icon">
                         <i class="bi bi-emoji-smile-fill"></i>
                     </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div class="card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
+                <div class="item card bg-warning text-primary col-md-4 p-4" style="height: fit-content;">
                     <div class="about-values-icon">
                         <i class="bi bi-people-fill"></i>
                     </div>
@@ -97,6 +97,11 @@ export default function AboutPage() {
 
             </div>
         </section>
+        
+        <div class="no-results py-5" style="display: none;">
+            <p class="text-center my-5 text-danger py-5">No results found.
+            </p>
+        </div>
 
         <!-- Our Teachers -->
         <section class="searchable-section trending blog container-fluid py-md-5 bg-white">
@@ -108,7 +113,7 @@ export default function AboutPage() {
                 <p class="lorem p-0 text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <div class="box mb-0 container mx-auto px-0 d-flex row justify-content-around gy-md-5 gy-2  pt-md-5 pt-3">
+            <div class="box container d-flex row justify-content-around gy-md-5 gy-2 pb-0 pt-3 py-lg-4 mx-auto mb-0">
                 <!-- Teacher 1 -->
                 <div class="card bg-primary text-white px-0 rounded-4 fade-slide-up">
                     <img src="./images/Noah.jpg" alt="Teacher Noah" class="card-img-top">
@@ -299,8 +304,8 @@ export default function AboutPage() {
         </section>
 
         <!-- Join newspaper -->
-        <section class="searchable-section about testimonials py-5">
-            <div class="container bg-warning py-5 rounded-4">
+        <section class="searchable-section about testimonials py-5 ">
+            <div class="container bg-warning py-5 rounded-4 fade-slide-up">
                 <div class="row align-items-center py-5 px-5">
 
                     <!-- CTA Content -->
